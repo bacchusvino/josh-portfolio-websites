@@ -14,14 +14,6 @@
     margin: 0 auto;
 }
 
-.hero-actions {
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-    margin-bottom: var(--spacing-sm);
-    justify-content: flex-start;
-}
-
 .blog-hero h1 {
     font-size: 2.8rem;
     margin-bottom: var(--spacing-sm);
@@ -64,12 +56,6 @@
     color: var(--color-primary);
 }
 
-.blog-card-title {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-xs);
-    color: var(--color-primary);
-}
-
 .blog-card .blog-meta {
     display: flex;
     align-items: center;
@@ -80,11 +66,6 @@
 }
 
 .blog-card p {
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-text-light);
-}
-
-.blog-card-excerpt {
     margin-bottom: var(--spacing-sm);
     color: var(--color-text-light);
 }
