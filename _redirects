@@ -1,0 +1,5 @@
+# Netlify _redirects file (backup to netlify.toml)
+# https://docs.netlify.com/routing/redirects/
+
+# Redirect www to non-www
+https://www.joshpirtle.com/* https://joshpirtle.com/:splat 301!
