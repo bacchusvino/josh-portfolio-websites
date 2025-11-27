@@ -1,20 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Josh – Josh Pirtle</title>
-<style>
-    body { font-family: 'Inter', sans-serif; background: #f5f5f5; margin: 0; padding: 50px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    a.back { text-decoration: none; color: #304ffe; font-weight: 600; display: block; margin-bottom: 20px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Josh Pirtle</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div class="container">
-    <a href="index.html" class="back">← Back</a>
-    <h1>About Josh</h1>
-    <p>Bio content will be added here later.</p>
-</div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Josh Pirtle - Home">Josh Pirtle</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="index.html#services" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none">
+                    <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                        <span class="icon-sun" aria-hidden="true">☀️</span>
+                        <span class="icon-moon" aria-hidden="true">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="about-hero-title">
+            <div class="hero-content">
+                <h1 id="about-hero-title">Meet Josh</h1>
+                <p class="hero-subtitle">Technologist, patient teacher, and builder of human-centered solutions.</p>
+                <div class="hero-buttons">
+                    <a href="#about-story" class="cta-button">Read the story</a>
+                    <a href="contact.html" class="cta-button cta-secondary">Work with me</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about-story" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title">Why I do this work</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I started as a mobile tech support specialist under the MyGeekMac and MyGeekPC brands, making house calls to help people—especially seniors—untangle their digital lives. Those visits taught me that the best support is empathetic, jargon-free, and leaves people more confident than before.</p>
+                        <p>Today, I combine that patience with deep AI knowledge. I've completed fellowships focused on voice agents and prompt engineering, building workflows that save real time without creating new headaches.</p>
+                        <p>Outside of tech, I'm a certified cooking instructor and a volunteer leader with the U.S. Naval Sea Cadet Corps. Teaching, mentoring, and building community are at the heart of everything I do.</p>
+                    </div>
+                    <div class="about-highlights" role="list" aria-label="Key achievements">
+                        <div class="highlight-item" role="listitem">
+                            <span class="highlight-number">50+</span>
+                            <span class="highlight-label">Regular tech support clients</span>
+                        </div>
+                        <div class="highlight-item" role="listitem">
+                            <span class="highlight-number">AIG</span>
+                            <span class="highlight-label">Voice & Agent Fellowship</span>
+                        </div>
+                        <div class="highlight-item" role="listitem">
+                            <span class="highlight-number">USNSCC</span>
+                            <span class="highlight-label">Volunteer Leader</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" aria-labelledby="values-title">
+            <div class="container">
+                <h2 id="values-title">How I work</h2>
+                <p class="section-intro">Straightforward communication, reliable follow-through, and solutions that respect your time.</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🤝</div>
+                        <h3>Plain-language explanations</h3>
+                        <p>Whether it's AI strategy or fixing Wi‑Fi, I translate the technical details into clear next steps.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🧭</div>
+                        <h3>Guided decisions</h3>
+                        <p>I'll help you choose the right tools, avoid shiny-object syndrome, and focus on what actually moves the needle.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🎯</div>
+                        <h3>Training that sticks</h3>
+                        <p>Written cheat sheets, hands-on demos, and follow-up support so the improvements last.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Josh Pirtle</span>
+                    <p class="footer-tagline">"Computers are like Old Testament gods; lots of rules and no mercy." — Joseph Campbell</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html#services">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="footer-links" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
+                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews (opens in new tab)">Google Reviews</a>
+                    <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer" aria-label="Facebook page (opens in new tab)">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
 </body>
 </html>
