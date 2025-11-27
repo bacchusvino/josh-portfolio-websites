@@ -1,295 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josh Pirtle | AI Consulting, Tech Support & Creative Services</title>
-    <meta name="description" content="Josh Pirtle helps individuals and small businesses leverage AI, get reliable tech support, and build meaningful projects. Based in Idyllwild, CA. Available nationwide.">
-    <meta name="keywords" content="AI consulting, tech support, Mac support, PC support, senior tech help, prompt engineering, workflow automation, MyGeekMac, MyGeekPC, Idyllwild CA">
-    <meta name="author" content="Josh Pirtle">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://joshpirtle.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Josh Pirtle Portfolio</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://joshpirtle.com/">
-    <meta property="og:title" content="Josh Pirtle | AI Consulting & Tech Support">
-    <meta property="og:description" content="AI consulting, tech support, and creative services. Patient help for seniors, practical AI for small businesses.">
-    <meta property="og:image" content="https://joshpirtle.com/assets/og-image.png">
-    <meta property="og:site_name" content="Josh Pirtle">
+<style>
+    body {
+        background: #f5f5f5;
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://joshpirtle.com/">
-    <meta name="twitter:title" content="Josh Pirtle | AI Consulting & Tech Support">
-    <meta name="twitter:description" content="AI consulting, tech support, and creative services. Patient help for seniors, practical AI for small businesses.">
-    <meta name="twitter:image" content="https://joshpirtle.com/assets/og-image.png">
+    .envelope-container {
+        position: relative;
+        width: 350px;
+        height: 250px;
+        cursor: pointer;
+    }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    /* Glass envelope base */
+    .envelope {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s;
+    }
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles.css">
+    .envelope:hover {
+        transform: translateY(-4px);
+    }
 
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    /* Blueprint etching lines */
+    .envelope::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(135deg, rgba(0,0,0,0.1) 0%, transparent 40%),
+            linear-gradient(45deg, rgba(0,0,0,0.05) 0%, transparent 60%);
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    /* Flap */
+    .flap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        transform-origin: top;
+        transition: transform 0.8s ease-in-out;
+        backdrop-filter: blur(12px);
+    }
+
+    /* Content inside */
+    .content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 75%;
+        padding: 20px;
+        background: #faf5ec; /* parchment */
+        border-top: 1px solid #e6decf;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    /* Open state */
+    .open .flap {
+        transform: rotateX(-150deg);
+    }
+
+    .open .content {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Links */
+    .content a {
+        color: #2a2a2a;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .content a:hover {
+        text-decoration: underline;
+    }
+</style>
 </head>
+
 <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container nav-container">
-            <a href="#" class="nav-logo" aria-label="Josh Pirtle - Home">Josh Pirtle</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu" role="menubar">
-                <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
-                <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
-                <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
-                <li role="none"><a href="#testimonials" class="nav-link" role="menuitem">Testimonials</a></li>
-                <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
-                <li role="none">
-                    <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-                        <span class="icon-sun" aria-hidden="true">☀️</span>
-                        <span class="icon-moon" aria-hidden="true">🌙</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" id="hero" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <h1 id="hero-title">Josh Pirtle</h1>
-                <p class="hero-subtitle">AI-powered tech support • Cooking instructor • Sea Cadet mentor</p>
-                <p class="hero-description">I help seniors navigate technology with patience, guide small businesses into the AI age, and mentor the next generation of leaders. Whether you need your Mac fixed, an AI workflow built, or a website that actually works—I'm your guy.</p>
-                <div class="hero-buttons">
-                    <a href="#services" class="cta-button">Explore Services</a>
-                    <a href="#contact" class="cta-button cta-secondary">Get in Touch</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Overview -->
-        <section class="services" id="services" aria-labelledby="services-title">
-            <div class="container">
-                <h2 id="services-title">What I Do</h2>
-                <p class="section-intro">From troubleshooting your home network to building AI-powered voice agents, I bring technical expertise with a human touch.</p>
-                <div class="services-grid">
-                    <!-- AI Consulting -->
-                    <a href="josh-ai-consulting/" class="service-card" aria-label="Learn more about AI Consulting services">
-                        <div class="service-icon" aria-hidden="true">🤖</div>
-                        <h3>AI Consulting</h3>
-                        <p>Custom AI strategies, prompt engineering, workflow automation, and hands-on training for individuals and teams ready to work smarter.</p>
-                        <span class="service-link" aria-hidden="true">Learn more →</span>
-                    </a>
-                    <!-- Tech Support -->
-                    <a href="josh-tech-splash/" class="service-card" aria-label="Learn more about Tech Support services">
-                        <div class="service-icon" aria-hidden="true">🔧</div>
-                        <h3>Tech Support</h3>
-                        <p>Patient, friendly tech help for Mac and PC users. Specializing in senior-friendly support—no jargon, just solutions.</p>
-                        <span class="service-link" aria-hidden="true">Learn more →</span>
-                    </a>
-                    <!-- Voice Agents -->
-                    <div class="service-card">
-                        <div class="service-icon" aria-hidden="true">🎙️</div>
-                        <h3>Voice & Agent Projects</h3>
-                        <p>Building conversational AI experiences through the AIG Fellowship. From voice assistants to multi-agent systems that actually help people.</p>
-                        <span class="service-link" aria-hidden="true">Coming soon</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects -->
-        <section class="portfolio" id="projects" aria-labelledby="projects-title">
-            <div class="container">
-                <h2 id="projects-title">Featured Projects</h2>
-                <p class="section-intro">A selection of work that shows what's possible when you combine technical skill with genuine care for the end user.</p>
-                <div class="project-grid">
-                    <!-- Project 1 -->
-                    <article class="project-card">
-                        <div class="project-image ai-consulting" role="img" aria-label="AI Workflow Automation project illustration">
-                            <span class="project-badge">AI</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>AI Workflow Automation</h3>
-                            <p>Designed and implemented a custom AI-powered documentation system for a small business, reducing manual work by 60% and improving accuracy.</p>
-                            <button class="btn" data-modal="project-ai-workflow" aria-haspopup="dialog">View Details</button>
-                        </div>
-                    </article>
-                    <!-- Project 2 -->
-                    <article class="project-card">
-                        <div class="project-image tech-support" role="img" aria-label="Senior Tech Support project illustration">
-                            <span class="project-badge">Tech</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Senior Tech Support Program</h3>
-                            <p>Created a patient, jargon-free tech support service for seniors. Now serving 50+ regular clients with home visits and remote help.</p>
-                            <button class="btn" data-modal="project-senior-tech" aria-haspopup="dialog">View Details</button>
-                        </div>
-                    </article>
-                    <!-- Project 3 -->
-                    <article class="project-card">
-                        <div class="project-image web-design" role="img" aria-label="Client Portfolio Sites project illustration">
-                            <span class="project-badge">Web</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>Client Portfolio Sites</h3>
-                            <p>Clean, fast-loading portfolio websites for professionals. Built with modern standards, optimized for search engines, and easy to maintain.</p>
-                            <a href="terry-weber-splash/" class="btn">See Example</a>
-                        </div>
-                    </article>
-                    <!-- Project 4 -->
-                    <article class="project-card">
-                        <div class="project-image voice-agent" role="img" aria-label="AIG Voice Agent project illustration">
-                            <span class="project-badge">Voice</span>
-                        </div>
-                        <div class="project-content">
-                            <h3>AIG Voice Agent Project</h3>
-                            <p>Fellowship project building conversational AI agents that can handle complex, multi-turn interactions with natural language understanding.</p>
-                            <button class="btn btn-disabled" disabled aria-disabled="true">In Progress</button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Josh -->
-        <section class="about" id="about" aria-labelledby="about-title">
-            <div class="container">
-                <h2 id="about-title">About Josh</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm Josh Pirtle—a technologist, teacher, and perpetual tinkerer based in Idyllwild, California. My path hasn't been linear, and that's exactly why it works.</p>
-                        <p>I spent years as a mobile tech support specialist under the MyGeekMac and MyGeekPC brands, making house calls to help people (especially seniors) untangle their digital lives. That work taught me that the best tech support isn't about showing off what you know—it's about meeting people where they are and leaving them more confident than you found them.</p>
-                        <p>Now I'm deep in the AI world, having completed fellowships focused on voice agents and prompt engineering. I help small businesses figure out where AI actually fits (and where it doesn't), building workflows that save real time without creating new headaches.</p>
-                        <p>Outside of tech, I'm a certified cooking instructor who believes good food brings people together. I also serve as a volunteer leader with the U.S. Naval Sea Cadet Corps, helping young people develop discipline, teamwork, and leadership skills.</p>
-                        <p>If you're looking for someone who can explain technical concepts without condescension, build things that actually work, and show up when they say they will—let's talk.</p>
-                    </div>
-                    <div class="about-highlights" role="list" aria-label="Key achievements">
-                        <div class="highlight-item" role="listitem">
-                            <span class="highlight-number">50+</span>
-                            <span class="highlight-label">Regular tech support clients</span>
-                        </div>
-                        <div class="highlight-item" role="listitem">
-                            <span class="highlight-number">AIG</span>
-                            <span class="highlight-label">Fellowship Graduate</span>
-                        </div>
-                        <div class="highlight-item" role="listitem">
-                            <span class="highlight-number">USNSCC</span>
-                            <span class="highlight-label">Volunteer Leader</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
-            <div class="container">
-                <h2 id="testimonials-title">What People Say</h2>
-                <p class="section-intro">Kind words from clients and collaborators.</p>
-                <div class="testimonial-grid">
-                    <blockquote class="testimonial-card">
-                        <p class="testimonial-text">"Josh fixed my computer and actually explained what was wrong in a way I could understand. No judgment, just help. I recommend him to all my friends at the senior center."</p>
-                        <footer class="testimonial-author">
-                            <cite>
-                                <span class="author-name">— Margaret T.</span>
-                                <span class="author-title">Tech Support Client</span>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                    <blockquote class="testimonial-card">
-                        <p class="testimonial-text">"We were drowning in paperwork until Josh set up an AI workflow that cut our processing time in half. He took the time to train our whole team, and now we actually use it every day."</p>
-                        <footer class="testimonial-author">
-                            <cite>
-                                <span class="author-name">— David R.</span>
-                                <span class="author-title">Small Business Owner</span>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                    <blockquote class="testimonial-card">
-                        <p class="testimonial-text">"Josh brings genuine care to everything he does. Whether he's teaching cadets or troubleshooting a network issue, you can tell he's invested in getting it right."</p>
-                        <footer class="testimonial-author">
-                            <cite>
-                                <span class="author-name">— LCDR James K.</span>
-                                <span class="author-title">Sea Cadet Program</span>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact CTA -->
-        <section class="contact" id="contact" aria-labelledby="contact-title">
-            <div class="container">
-                <h2 id="contact-title">Let's Work Together</h2>
-                <p class="contact-intro">Whether you need tech support, AI consulting, or just want to connect—I'd love to hear from you.</p>
-                <div class="contact-buttons">
-                    <a href="mailto:josh@mygeekmac.com" class="cta-button">
-                        <span class="btn-icon" aria-hidden="true">✉️</span> Send an Email
-                    </a>
-                    <a href="tel:+19514685674" class="cta-button cta-secondary">
-                        <span class="btn-icon" aria-hidden="true">📞</span> +1 (951) 468-JOSH
-                    </a>
-                </div>
-                <p class="contact-note">PO Box 11, Idyllwild, CA 92549 • Available for remote work nationwide</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
-        <span aria-hidden="true">↑</span>
-    </button>
-
-    <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-logo">Josh Pirtle</span>
-                    <p class="footer-tagline">"Computers are like Old Testament gods; lots of rules and no mercy." — Joseph Campbell</p>
-                </div>
-                <nav class="footer-nav" aria-label="Footer navigation">
-                    <a href="#services">Services</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-                <div class="footer-links" aria-label="Social links">
-                    <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
-                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews (opens in new tab)">Google Reviews</a>
-                    <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer" aria-label="Facebook page (opens in new tab)">Facebook</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Modal Template -->
-    <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
-        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-            <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-content" id="modal-content">
-                <h3 id="modal-title" class="sr-only">Project Details</h3>
-                <!-- Dynamic content inserted by JS -->
-            </div>
+<div class="envelope-container" onclick="this.classList.toggle('open')">
+    <div class="envelope">
+        <div class="flap"></div>
+        <div class="content">
+            <a href="#projects">Projects</a>
+            <a href="#about">About Josh</a>
+            <a href="#contact">Contact</a>
         </div>
     </div>
+</div>
 
-    <script src="./main.js" defer></script>
 </body>
 </html>
