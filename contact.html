@@ -1,20 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact – Josh Pirtle</title>
-<style>
-    body { font-family: 'Inter', sans-serif; background: #f5f5f5; margin: 0; padding: 50px; }
-    .container { max-width: 750px; margin: auto; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-    a.back { text-decoration: none; color: #304ffe; font-weight: 600; display: block; margin-bottom: 20px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Josh Pirtle</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<div class="container">
-    <a href="index.html" class="back">← Back</a>
-    <h1>Contact</h1>
-    <p>Your professional email or form goes here.</p>
-</div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Josh Pirtle - Home">Josh Pirtle</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="index.html#services" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none">
+                    <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                        <span class="icon-sun" aria-hidden="true">☀️</span>
+                        <span class="icon-moon" aria-hidden="true">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="contact-hero-title">
+            <div class="hero-content">
+                <h1 id="contact-hero-title">Let's talk</h1>
+                <p class="hero-subtitle">Tell me what you need help with—AI, tech support, or a new build.</p>
+                <div class="hero-buttons">
+                    <a href="#contact-options" class="cta-button">View contact options</a>
+                    <a href="tel:+19514685674" class="cta-button cta-secondary">Call now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact-options" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title">Get in touch</h2>
+                <p class="contact-intro">Reach out and I'll respond within one business day.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:josh@mygeekmac.com" class="cta-button"><span class="btn-icon" aria-hidden="true">✉️</span> Email Josh</a>
+                    <a href="tel:+19514685674" class="cta-button cta-secondary"><span class="btn-icon" aria-hidden="true">📞</span> +1 (951) 468-JOSH</a>
+                </div>
+                <p class="contact-note">PO Box 11, Idyllwild, CA 92549 • Available for remote work nationwide</p>
+            </div>
+        </section>
+
+        <section class="services" aria-labelledby="cta-services-title">
+            <div class="container">
+                <h2 id="cta-services-title">How I can help</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🤖</div>
+                        <h3>AI Consulting</h3>
+                        <p>Workflow automation, prompt engineering, and practical roadmaps to bring AI into your day-to-day operations.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🔧</div>
+                        <h3>Tech Support</h3>
+                        <p>Mac and PC troubleshooting with patient explanations, remote help, and on-site visits when needed.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon" aria-hidden="true">🎙️</div>
+                        <h3>Voice & Agent Projects</h3>
+                        <p>Conversational AI experiences built through the AIG Fellowship, tailored to how your team actually works.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        <span aria-hidden="true">↑</span>
+    </button>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Josh Pirtle</span>
+                    <p class="footer-tagline">"Computers are like Old Testament gods; lots of rules and no mercy." — Joseph Campbell</p>
+                </div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html#services">Services</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="footer-links" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
+                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews (opens in new tab)">Google Reviews</a>
+                    <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer" aria-label="Facebook page (opens in new tab)">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./main.js" defer></script>
 </body>
 </html>
