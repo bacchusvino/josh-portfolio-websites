@@ -55,8 +55,9 @@
             <ul class="nav__menu" id="nav-menu" role="menubar">
                 <li role="none"><a href="/" class="nav__link nav__link--active" role="menuitem">Home</a></li>
                 <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
-                <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="/projects/" class="nav__link" role="menuitem">Projects</a></li>
                 <li role="none"><a href="/dispatch/" class="nav__link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
                 <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
                 <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
             </ul>
@@ -93,13 +94,15 @@
                 </div>
                 <div class="hero__photo">
                     <div class="hero__photo-frame">
+                        <!-- Hero image: displays when /img/josh-hero.jpg exists, hidden by default until loaded -->
+                        <img src="/img/josh-hero.jpg" alt="Josh Pirtle - IT Support Professional" class="hero__photo-img" style="display: none;" onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <!-- Placeholder shown when image is missing or loading -->
                         <div class="hero__photo-placeholder">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                             </svg>
                             <p>Photo of Josh<br><small>Add image to /img/josh-hero.jpg</small></p>
                         </div>
-                        <!-- Replace placeholder with: <img src="img/josh-hero.jpg" alt="Josh Pirtle - IT Support Professional"> -->
                     </div>
                     <div class="hero__accent"></div>
                 </div>
@@ -344,9 +347,9 @@
                     <h4 class="footer__heading">Company</h4>
                     <ul class="footer__links">
                         <li><a href="/about.html" class="footer__link">About Josh</a></li>
+                        <li><a href="/projects/" class="footer__link">Projects</a></li>
                         <li><a href="/dispatch/" class="footer__link">Blog</a></li>
                         <li><a href="/contact.html" class="footer__link">Contact</a></li>
-                        <li><a href="https://g.page/r/CYkr2-fy_M9qEAI/review" class="footer__link" target="_blank" rel="noopener noreferrer">Reviews</a></li>
                     </ul>
                 </div>
                 <div>

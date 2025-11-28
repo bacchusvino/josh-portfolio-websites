@@ -3,28 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why We Got the Anthropic AI Story Wrong | The Pirtle Dispatch</title>
-    <meta name="description" content="A breakdown of how the viral 'AI called the FBI' story went off the rails and what actually happened with Anthropic's red-teaming process.">
-    <meta name="keywords" content="Anthropic AI, FBI story, AI safety, red teaming, AI misinformation, Claude AI">
+    <title>Projects | Josh Pirtle - AI, Web Development & Digital Solutions</title>
+    <meta name="description" content="Selected work in AI, web development, and digital structure. Explore projects by Josh Pirtle including executive portfolios, AI pipelines, and modern web design.">
+    <meta name="keywords" content="Josh Pirtle projects, web development portfolio, AI projects, digital solutions, executive portfolio">
     <meta name="author" content="Josh Pirtle">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://joshpirtle.com/dispatch/anthropic-ai-story-wrong.html">
+    <link rel="canonical" href="https://joshpirtle.com/projects/">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://joshpirtle.com/dispatch/anthropic-ai-story-wrong.html">
-    <meta property="og:title" content="Why We Got the Anthropic AI Story Wrong">
-    <meta property="og:description" content="A breakdown of how the viral 'AI called the FBI' story went off the rails and what actually happened.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshpirtle.com/projects/">
+    <meta property="og:title" content="Projects | Josh Pirtle">
+    <meta property="og:description" content="Selected work in AI, web development, and digital structure.">
     <meta property="og:image" content="https://joshpirtle.com/img/og-image.png">
     <meta property="og:site_name" content="Josh Pirtle">
-    <meta property="article:published_time" content="2025-11-27">
-    <meta property="article:author" content="Josh Pirtle">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Why We Got the Anthropic AI Story Wrong">
-    <meta name="twitter:description" content="A breakdown of how the viral 'AI called the FBI' story went off the rails.">
-    <meta name="twitter:image" content="https://joshpirtle.com/img/og-image.png">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230D1B2A' rx='15' width='100' height='100'/><text y='68' x='50' text-anchor='middle' font-size='50' font-weight='bold' fill='%2300D4FF'>JP</text></svg>">
@@ -56,8 +48,8 @@
             <ul class="nav__menu" id="nav-menu" role="menubar">
                 <li role="none"><a href="/" class="nav__link" role="menuitem">Home</a></li>
                 <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
-                <li role="none"><a href="/projects/" class="nav__link" role="menuitem">Projects</a></li>
-                <li role="none"><a href="/dispatch/" class="nav__link nav__link--active" role="menuitem">Blog</a></li>
+                <li role="none"><a href="/projects/" class="nav__link nav__link--active" role="menuitem">Projects</a></li>
+                <li role="none"><a href="/dispatch/" class="nav__link" role="menuitem">Blog</a></li>
                 <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
                 <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
                 <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
@@ -66,94 +58,66 @@
     </nav>
 
     <main id="main">
-        <!-- Article Header -->
+        <!-- Page Header -->
         <header class="page-header">
-            <div class="container container--narrow">
-                <a href="/dispatch/" class="btn btn--outline btn--small mb-8" style="margin-bottom: var(--space-8);">← Back to The Pirtle Dispatch</a>
-                <div class="blog-post__meta" style="color: var(--color-gray-300);">
-                    <span>November 27, 2025</span>
-                    <span>•</span>
-                    <span>AI & Media</span>
-                </div>
-                <h1 class="page-header__title" style="text-align: left; font-size: var(--text-4xl);">Why We Got the Anthropic AI Story Wrong</h1>
-                <p class="page-header__text" style="text-align: left;">
-                    What happens when a red-team anecdote turns into a viral myth — and what the real safeguards actually looked like.
+            <div class="container">
+                <h1 class="page-header__title">Projects</h1>
+                <p class="page-header__text">
+                    Selected work in AI, web development, and digital structure.
                 </p>
             </div>
         </header>
 
-        <!-- Article Content -->
-        <article class="section">
-            <div class="container container--narrow">
-                <div class="blog-post">
-                    <div class="blog-post__content">
-                        <p>
-                            When the "AI called the FBI" headline spread, the story felt too wild to ignore. It painted a picture of an AI system that autonomously dialed federal agents like a rogue character from science fiction. But the real account, drawn from Anthropic's frontier model red-teaming, was more mundane — and far more reassuring — than the viral retellings suggested.
+        <!-- Projects Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid--3">
+                    <!-- Terry Weber Project Card -->
+                    <article class="card">
+                        <div class="card__icon">👔</div>
+                        <h3 class="card__title">Terry Weber</h3>
+                        <p class="card__text">
+                            Executive leadership and AI-enhanced portfolio site for a transformational CEO.
+                            Features blog system, board resume, and corporate-clean design.
                         </p>
+                        <a href="/projects/terry-weber.html" class="btn btn--secondary btn--small">View Project</a>
+                    </article>
 
-                        <div class="pull-quote">
-                            The AI didn't pick up a phone. Humans in the loop did what safety training told them to do.
-                        </div>
-
-                        <h2>How the story snowballed</h2>
-                        <p>
-                            The original anecdote described an AI model suggesting that human evaluators contact law enforcement after it was prompted with violent extremist content. Somewhere between a technical talk, a news recap, and a social media thread, "the model recommended escalation" warped into "the model autonomously called the FBI." It's a classic example of telephone: small wording shifts turned a controlled test into a spooky fable.
+                    <!-- Josh Pirtle Portfolio Card -->
+                    <article class="card">
+                        <div class="card__icon">🖥️</div>
+                        <h3 class="card__title">Josh Pirtle Portfolio Rebuild</h3>
+                        <p class="card__text">
+                            Modern identity site with Future History aesthetic, AI-powered blog,
+                            and senior-friendly IT support focus. Built with accessibility in mind.
                         </p>
+                        <a href="/" class="btn btn--secondary btn--small">View Project</a>
+                    </article>
 
-                        <h2>What actually happened</h2>
-                        <p>
-                            During structured red-team exercises, evaluators pushed the model with high-risk prompts. The model responded with a safety-compliant instruction: consult authorities. A human then followed the red-team playbook and notified the FBI about the test content. The model never placed a call, never acted on its own, and never had the ability to do so. Guardrails worked, and humans stayed in control.
+                    <!-- AIG-17 Cohort Card -->
+                    <article class="card">
+                        <div class="card__icon">🤖</div>
+                        <h3 class="card__title">AIG-17 Cohort</h3>
+                        <p class="card__text">
+                            AI agent pipeline, website infrastructure, and tooling developed during
+                            the AIG Fellowship program. Voice agents and workflow automation.
                         </p>
-
-                        <h2>Why precision matters</h2>
-                        <p>
-                            Sloppy phrasing erodes public trust in AI safety work. When we exaggerate, we make real safeguards look like failures instead of successes. Clear language helps policymakers, journalists, and everyday users understand that "safety alignment" is about predictable, reviewable behavior — not runaway agents improvising on the open internet.
-                        </p>
-
-                        <h2>How to tell these stories responsibly</h2>
-                        <ul>
-                            <li><strong>Separate model suggestions from human actions.</strong> A model proposing escalation isn't the same as the model executing it.</li>
-                            <li><strong>Highlight the controls.</strong> If humans or platform policies prevented harm, that's the core of the story.</li>
-                            <li><strong>Link to source material.</strong> Citations keep discussions grounded and make corrections easier when details drift.</li>
-                        </ul>
-
-                        <p>
-                            When we stay disciplined about the language we use — especially around high-stakes AI tests — we help audiences distinguish between real risk and hype. That clarity is essential for building good policy and practical products.
-                        </p>
-
-                        <hr style="margin: var(--space-16) 0; border: none; border-top: 1px solid var(--color-gray-200);">
-
-                        <h3>Further Reading / Sources</h3>
-                        <ul>
-                            <li><a href="https://www.anthropic.com/news/frontier-threats-red-teaming" target="_blank" rel="noopener noreferrer">Anthropic Blog – Frontier Threats Red Teaming</a></li>
-                            <li><a href="https://www.cbsnews.com/60-minutes/overtime/" target="_blank" rel="noopener noreferrer">60 Minutes Overtime – Interview Coverage</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Article Footer -->
-                    <div class="blog-post__footer">
-                        <div class="grid grid--2">
-                            <div>
-                                <a href="/dispatch/" class="btn btn--secondary">← Back to The Pirtle Dispatch</a>
-                            </div>
-                            <div class="text-right">
-                                <a href="/" class="btn btn--secondary">Home →</a>
-                            </div>
-                        </div>
-                    </div>
+                        <a href="/contact.html" class="btn btn--secondary btn--small">Inquire</a>
+                    </article>
                 </div>
             </div>
-        </article>
+        </section>
 
         <!-- CTA Section -->
-        <section class="section section--alt">
-            <div class="container container--narrow text-center">
-                <h2 class="mb-4">Questions About AI?</h2>
-                <p class="text-muted mb-8">
-                    I help individuals and small businesses understand AI — what it can do, what it can't,
-                    and how to use it practically. No hype, just honest guidance.
+        <section class="section section--dark cta bg-blueprint">
+            <div class="container">
+                <h2 class="cta__title">Have a Project in Mind?</h2>
+                <p class="cta__text">
+                    Whether you need a portfolio site, AI integration, or digital infrastructure — let's talk about what's possible.
                 </p>
-                <a href="/contact.html" class="btn btn--primary">Let's Talk</a>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="/contact.html" class="btn btn--primary btn--large">Start a Conversation</a>
+                </div>
             </div>
         </section>
     </main>
