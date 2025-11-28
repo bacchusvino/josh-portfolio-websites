@@ -232,10 +232,37 @@
         });
     }
 
-    // Close modal on Escape key
+    // Close modal on Escape key and handle focus trap
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+        if (!modalOverlay || !modalOverlay.classList.contains('active')) return;
+
+        if (event.key === 'Escape') {
             closeModal();
+            return;
+        }
+
+        // Focus trap - keep Tab key within modal
+        if (event.key === 'Tab') {
+            const modal = modalOverlay.querySelector('.modal');
+            const focusableElements = modal.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            const firstFocusable = focusableElements[0];
+            const lastFocusable = focusableElements[focusableElements.length - 1];
+
+            if (event.shiftKey) {
+                // Shift + Tab: if on first element, wrap to last
+                if (document.activeElement === firstFocusable) {
+                    event.preventDefault();
+                    lastFocusable.focus();
+                }
+            } else {
+                // Tab: if on last element, wrap to first
+                if (document.activeElement === lastFocusable) {
+                    event.preventDefault();
+                    firstFocusable.focus();
+                }
+            }
         }
     });
 

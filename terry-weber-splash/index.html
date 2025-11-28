@@ -29,12 +29,28 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="navbar" aria-label="Site navigation">
-        <div class="container nav-container">
-            <a href="../" class="nav-logo">← Built by Josh Pirtle</a>
-            <span class="nav-title" aria-hidden="true">Terry S. Weber</span>
-        </div>
-    </nav>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-container">
+        <a href="/index.html" class="nav-logo" aria-label="Josh Pirtle - Home">Josh Pirtle</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu" role="menubar">
+            <li role="none"><a href="/index.html#services" class="nav-link" role="menuitem">Services</a></li>
+            <li role="none"><a href="/projects.html" class="nav-link" role="menuitem">Projects</a></li>
+            <li role="none"><a href="/about.html" class="nav-link" role="menuitem">About</a></li>
+            <li role="none"><a href="/contact.html" class="nav-link" role="menuitem">Contact</a></li>
+            <li role="none">
+                <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                    <span class="icon-sun" aria-hidden="true">☀️</span>
+                    <span class="icon-moon" aria-hidden="true">🌙</span>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
 
     <main id="main-content" role="main">
         <!-- Hero Section -->
@@ -157,10 +173,28 @@
 
     <!-- Footer -->
     <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <p>&copy; 2025 Terry S. Weber. All rights reserved.</p>
-            <p class="footer-credit">Website by <a href="../">Josh Pirtle</a> · <a href="mailto:josh@mygeekmac.com">josh@mygeekmac.com</a></p>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Josh Pirtle</span>
+                <p class="footer-tagline">"Computers are like Old Testament gods; lots of rules and no mercy." — Joseph Campbell</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="/index.html#services">Services</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+            <div class="footer-links" aria-label="Social links">
+                <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
+                <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews (opens in new tab)">Google Reviews</a>
+                <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer" aria-label="Facebook page (opens in new tab)">Facebook</a>
+            </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
