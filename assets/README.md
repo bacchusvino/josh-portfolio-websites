@@ -1,6 +1,9 @@
 # Assets Folder
 
-Place the following image files in this folder for social sharing:
+Place the following image files in this folder for social sharing.
+
+**Note:** SVG placeholder files are included (`apple-touch-icon.svg`, `og-image.svg`) as design references.
+You must create PNG versions for production—social media platforms require raster images for OG tags.
 
 ## Required Images
 
