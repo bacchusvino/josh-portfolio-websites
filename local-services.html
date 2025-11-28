@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idyllwild Local Services Hub | Utilities & Providers Guide | MyGeekMac</title>
+    <meta name="description" content="Essential guide to utilities and services in Idyllwild, Pine Cove, Fern Valley, and Mountain Center. Internet, power, water, propane, and mail delivery information.">
+    <meta name="keywords" content="Idyllwild utilities, Pine Cove services, Fern Valley utilities, Mountain Center internet, Garner Valley providers, local services guide">
+    <meta name="author" content="Josh Pirtle">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://joshpirtle.com/local-services.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshpirtle.com/local-services.html">
+    <meta property="og:title" content="Idyllwild Local Services Hub | Utilities Guide">
+    <meta property="og:description" content="Essential guide to utilities and services in Idyllwild, Pine Cove, Fern Valley, and Mountain Center.">
+    <meta property="og:image" content="https://joshpirtle.com/img/og-image.png">
+    <meta property="og:site_name" content="Josh Pirtle">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230D1B2A' rx='15' width='100' height='100'/><text y='68' x='50' text-anchor='middle' font-size='50' font-weight='bold' fill='%2300D4FF'>JP</text></svg>">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Local Services Page Specific Styles */
+        .service-provider {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            margin-bottom: var(--space-6);
+            transition: box-shadow var(--transition-base);
+        }
+
+        .service-provider:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-provider__header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
+        .service-provider__icon {
+            font-size: var(--text-3xl);
+            flex-shrink: 0;
+        }
+
+        .service-provider__name {
+            font-size: var(--text-xl);
+            font-weight: 700;
+            color: var(--color-navy);
+            margin: 0;
+        }
+
+        .service-provider__area {
+            font-size: var(--text-sm);
+            color: var(--color-accent);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .service-provider__description {
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-4);
+            line-height: 1.7;
+        }
+
+        .service-provider__features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 var(--space-6) 0;
+        }
+
+        .service-provider__features li {
+            padding: var(--space-2) 0;
+            padding-left: var(--space-6);
+            position: relative;
+            color: var(--color-text-muted);
+        }
+
+        .service-provider__features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .area-badge {
+            display: inline-block;
+            background: var(--color-bg-alt);
+            color: var(--color-navy);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            margin-right: var(--space-2);
+            margin-bottom: var(--space-2);
+        }
+
+        .area-badge--primary {
+            background: var(--color-accent);
+            color: var(--color-navy-dark);
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, var(--color-bg-alt) 0%, var(--color-white) 100%);
+            border-left: 4px solid var(--color-accent);
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            margin: var(--space-8) 0;
+        }
+
+        .info-box__title {
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: var(--space-2);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .info-box__text {
+            color: var(--color-text-muted);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .propane-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-6) 0;
+        }
+
+        .propane-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-200);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .propane-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+
+        .propane-card__name {
+            font-weight: 600;
+            color: var(--color-navy);
+            margin: 0;
+        }
+
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--color-accent);
+            color: var(--color-navy-dark);
+            border-radius: var(--radius-xl);
+            font-size: var(--text-2xl);
+            margin-bottom: var(--space-4);
+        }
+
+        .toc {
+            background: var(--color-bg-alt);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            margin-bottom: var(--space-12);
+        }
+
+        .toc__title {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--color-navy);
+            margin-bottom: var(--space-4);
+        }
+
+        .toc__list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: var(--space-3);
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc__link {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3);
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all var(--transition-base);
+        }
+
+        .toc__link:hover {
+            background: var(--color-accent);
+            color: var(--color-navy-dark);
+            transform: translateY(-2px);
+        }
+
+        .toc__icon {
+            font-size: var(--text-xl);
+        }
+
+        /* Mail delivery table */
+        .delivery-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+        }
+
+        .delivery-table th,
+        .delivery-table td {
+            padding: var(--space-4);
+            text-align: left;
+            border-bottom: 1px solid var(--color-gray-200);
+        }
+
+        .delivery-table th {
+            background: var(--color-bg-alt);
+            font-weight: 600;
+            color: var(--color-navy);
+        }
+
+        .delivery-table td {
+            color: var(--color-text-muted);
+        }
+
+        .delivery-status {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: 500;
+        }
+
+        .delivery-status--no {
+            background: #FEE2E2;
+            color: #991B1B;
+        }
+
+        .delivery-status--yes {
+            background: #D1FAE5;
+            color: #065F46;
+        }
+
+        @media (max-width: 768px) {
+            .delivery-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .service-provider {
+                padding: var(--space-6);
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav__inner">
+            <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
+                <span class="nav__logo-icon">JP</span>
+                Josh Pirtle
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" class="nav__link" role="menuitem">Home</a></li>
+                <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
+                <li role="none"><a href="/projects/" class="nav__link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="/dispatch/" class="nav__link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Idyllwild Services Hub</h1>
+                <p class="page-header__text">
+                    Your guide to utilities and essential services in the mountain communities
+                </p>
+            </div>
+        </header>
+
+        <!-- Table of Contents -->
+        <section class="section" style="padding-top: var(--space-8);">
+            <div class="container">
+                <nav class="toc" aria-label="Page sections">
+                    <h2 class="toc__title">Quick Navigation</h2>
+                    <ul class="toc__list">
+                        <li><a href="#overview" class="toc__link"><span class="toc__icon">🏔️</span> Overview</a></li>
+                        <li><a href="#internet" class="toc__link"><span class="toc__icon">🌐</span> Internet</a></li>
+                        <li><a href="#power" class="toc__link"><span class="toc__icon">⚡</span> Power</a></li>
+                        <li><a href="#water" class="toc__link"><span class="toc__icon">💧</span> Water</a></li>
+                        <li><a href="#propane" class="toc__link"><span class="toc__icon">🔥</span> Propane</a></li>
+                        <li><a href="#mail" class="toc__link"><span class="toc__icon">📬</span> Mail</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Overview -->
+        <section class="section section--alt" id="overview">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">🏔️</div>
+                    <h2 class="section-header__title">About Our Mountain Communities</h2>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p class="text-lead mb-8">
+                        The Idyllwild area is a beautiful rural mountain community nestled in the San Jacinto Mountains.
+                        Unlike typical suburban neighborhoods, our mountain communities have a unique patchwork of different
+                        utility providers depending on your exact location.
+                    </p>
+
+                    <p class="mb-8" style="color: var(--color-text-muted); line-height: 1.8;">
+                        The four main areas — <strong>Idyllwild</strong>, <strong>Pine Cove</strong>, <strong>Fern Valley</strong>,
+                        and <strong>Mountain Center/Garner Valley</strong> — each have different providers for internet, power,
+                        and water. This guide will help you understand which services are available in your specific area and
+                        how to get connected.
+                    </p>
+
+                    <div class="info-box">
+                        <p class="info-box__title">
+                            <span>📍</span> ZIP Code Guide
+                        </p>
+                        <p class="info-box__text">
+                            <strong>92549</strong> — Idyllwild, Pine Cove, and Fern Valley<br>
+                            <strong>92561</strong> — Mountain Center and Garner Valley
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Internet Providers -->
+        <section class="section" id="internet">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">🌐</div>
+                    <h2 class="section-header__title">Internet Providers</h2>
+                    <p class="section-header__text">
+                        High-speed internet options vary by location. Check availability at your specific address.
+                    </p>
+                </div>
+
+                <!-- Frontier Fiber -->
+                <!-- EDIT: Update Frontier referral link below if needed -->
+                <div class="service-provider">
+                    <div class="service-provider__header">
+                        <div class="service-provider__icon">📡</div>
+                        <div>
+                            <h3 class="service-provider__name">Frontier Fiber</h3>
+                            <p class="service-provider__area">Fiber Optic Internet</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="area-badge area-badge--primary">Idyllwild</span>
+                        <span class="area-badge">Parts of Pine Cove</span>
+                        <span class="area-badge">Parts of Fern Valley</span>
+                    </div>
+                    <p class="service-provider__description">
+                        Frontier has been expanding true fiber optic service throughout the Idyllwild area.
+                        Fiber provides the fastest and most reliable internet connection available on the mountain —
+                        ideal for streaming, video calls, home offices, and multiple devices.
+                    </p>
+                    <ul class="service-provider__features">
+                        <li>True fiber optic connection (not DSL)</li>
+                        <li>Expanding coverage area</li>
+                        <li>Best option for streaming and video calls</li>
+                        <li>Availability varies street-to-street</li>
+                    </ul>
+                    <!-- EDIT: Frontier referral link - do not modify the URL -->
+                    <a href="https://frontier.com/ftr-buy?user_id=20832&affiliateKey=c75de3d7-1f0b-4d0d-8603-02aa8517357f&utm_campaign=customerreferral&utm_term=frontier-cart&utm_medium=click-to-copy&utm_source=web"
+                       class="btn btn--primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Check Frontier Fiber Availability
+                    </a>
+                </div>
+
+                <!-- Spectrum -->
+                <!-- EDIT: Update Spectrum link below if needed -->
+                <div class="service-provider">
+                    <div class="service-provider__header">
+                        <div class="service-provider__icon">📺</div>
+                        <div>
+                            <h3 class="service-provider__name">Spectrum</h3>
+                            <p class="service-provider__area">Cable Internet</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="area-badge area-badge--primary">Idyllwild</span>
+                        <span class="area-badge">Pine Cove</span>
+                    </div>
+                    <p class="service-provider__description">
+                        Spectrum provides cable internet service to parts of Idyllwild and Pine Cove.
+                        Cable internet is often available in areas where fiber hasn't reached yet,
+                        making it a good alternative option.
+                    </p>
+                    <ul class="service-provider__features">
+                        <li>Cable broadband connection</li>
+                        <li>Speeds depend on neighborhood infrastructure</li>
+                        <li>Often available where Frontier fiber is not</li>
+                        <li>TV and phone bundles available</li>
+                    </ul>
+                    <!-- EDIT: Spectrum website link -->
+                    <a href="https://www.spectrum.com"
+                       class="btn btn--primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Check Spectrum Availability
+                    </a>
+                </div>
+
+                <!-- AEC Fiber -->
+                <!-- EDIT: Update AEC Fiber link below if needed -->
+                <div class="service-provider">
+                    <div class="service-provider__header">
+                        <div class="service-provider__icon">⚡</div>
+                        <div>
+                            <h3 class="service-provider__name">Anza Electric Cooperative Fiber</h3>
+                            <p class="service-provider__area">Fiber Optic Internet (AEC Fiber)</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="area-badge area-badge--primary">Mountain Center</span>
+                        <span class="area-badge">Garner Valley</span>
+                    </div>
+                    <p class="service-provider__description">
+                        Anza Electric Cooperative offers fiber internet service to customers in the Mountain Center
+                        and Garner Valley areas (ZIP 92561). This is true fiber with excellent consistency and speeds.
+                        Service is only available to customers who receive their electricity from AEC.
+                    </p>
+                    <ul class="service-provider__features">
+                        <li>True fiber optic connection</li>
+                        <li>Excellent reliability and consistency</li>
+                        <li>Available only to AEC electric customers</li>
+                        <li>Local cooperative with local support</li>
+                    </ul>
+                    <!-- EDIT: AEC website/fiber link -->
+                    <a href="https://www.anzaelectric.org"
+                       class="btn btn--primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Check AEC Fiber Availability
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Power Providers -->
+        <section class="section section--alt" id="power">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">⚡</div>
+                    <h2 class="section-header__title">Power Providers</h2>
+                    <p class="section-header__text">
+                        Your electric provider depends on your location.
+                    </p>
+                </div>
+
+                <div class="grid grid--2">
+                    <!-- SCE -->
+                    <!-- EDIT: Update SCE link below if needed -->
+                    <div class="service-provider">
+                        <div class="service-provider__header">
+                            <div class="service-provider__icon">💡</div>
+                            <div>
+                                <h3 class="service-provider__name">Southern California Edison</h3>
+                                <p class="service-provider__area">SCE</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="area-badge area-badge--primary">Idyllwild</span>
+                            <span class="area-badge">Pine Cove</span>
+                            <span class="area-badge">Fern Valley</span>
+                        </div>
+                        <p class="service-provider__description">
+                            Southern California Edison provides electric service to Idyllwild, Pine Cove,
+                            and Fern Valley (ZIP 92549). Contact SCE to establish new service or transfer
+                            existing service to your mountain home.
+                        </p>
+                        <!-- EDIT: SCE website link -->
+                        <a href="https://www.sce.com"
+                           class="btn btn--primary"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Set Up SCE Service
+                        </a>
+                    </div>
+
+                    <!-- AEC Electric -->
+                    <!-- EDIT: Update AEC link below if needed -->
+                    <div class="service-provider">
+                        <div class="service-provider__header">
+                            <div class="service-provider__icon">🔌</div>
+                            <div>
+                                <h3 class="service-provider__name">Anza Electric Cooperative</h3>
+                                <p class="service-provider__area">AEC</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="area-badge area-badge--primary">Mountain Center</span>
+                            <span class="area-badge">Garner Valley</span>
+                        </div>
+                        <p class="service-provider__description">
+                            Anza Electric Cooperative is an independent power cooperative serving Mountain Center
+                            and Garner Valley (ZIP 92561). As a local co-op, AEC provides personalized service
+                            to the community.
+                        </p>
+                        <!-- EDIT: AEC website link -->
+                        <a href="https://www.anzaelectric.org"
+                           class="btn btn--primary"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Set Up AEC Electric Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Water Districts -->
+        <section class="section" id="water">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">💧</div>
+                    <h2 class="section-header__title">Water Districts</h2>
+                    <p class="section-header__text">
+                        The mountain has three separate water districts. Your provider depends on which neighborhood you're in.
+                    </p>
+                </div>
+
+                <div class="grid grid--3">
+                    <!-- Idyllwild Water District -->
+                    <!-- EDIT: Update water district links below if needed -->
+                    <div class="service-provider">
+                        <div class="service-provider__header">
+                            <div class="service-provider__icon">💧</div>
+                            <div>
+                                <h3 class="service-provider__name">Idyllwild Water District</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="area-badge area-badge--primary">Central Idyllwild</span>
+                        </div>
+                        <p class="service-provider__description">
+                            Serves the central Idyllwild area. Contact them to establish water service
+                            for your property.
+                        </p>
+                        <!-- EDIT: Idyllwild Water District link -->
+                        <a href="https://www.idyllwildwater.net"
+                           class="btn btn--secondary btn--small"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            idyllwildwater.net
+                        </a>
+                    </div>
+
+                    <!-- Fern Valley Water District -->
+                    <div class="service-provider">
+                        <div class="service-provider__header">
+                            <div class="service-provider__icon">💧</div>
+                            <div>
+                                <h3 class="service-provider__name">Fern Valley Water District</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="area-badge area-badge--primary">Fern Valley</span>
+                        </div>
+                        <p class="service-provider__description">
+                            Serves the Fern Valley neighborhood. Contact them to establish water service
+                            for your property.
+                        </p>
+                        <!-- EDIT: Fern Valley Water District link -->
+                        <a href="https://www.fvwd.org"
+                           class="btn btn--secondary btn--small"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            fvwd.org
+                        </a>
+                    </div>
+
+                    <!-- Pine Cove Water District -->
+                    <div class="service-provider">
+                        <div class="service-provider__header">
+                            <div class="service-provider__icon">💧</div>
+                            <div>
+                                <h3 class="service-provider__name">Pine Cove Water District</h3>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="area-badge area-badge--primary">Pine Cove</span>
+                        </div>
+                        <p class="service-provider__description">
+                            Serves the Pine Cove area. Contact them to establish water service
+                            for your property.
+                        </p>
+                        <!-- EDIT: Pine Cove Water District link -->
+                        <a href="https://www.pcwd.org"
+                           class="btn btn--secondary btn--small"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            pcwd.org
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p class="info-box__title">
+                        <span>💡</span> Not sure which district?
+                    </p>
+                    <p class="info-box__text">
+                        If you're unsure which water district serves your address, check your property documents
+                        or contact any of the districts above — they can help direct you to the right provider.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Propane Providers -->
+        <section class="section section--alt" id="propane">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">🔥</div>
+                    <h2 class="section-header__title">Propane Providers</h2>
+                    <p class="section-header__text">
+                        Propane is the primary heating source for most homes in Idyllwild, Pine Cove, and Fern Valley.
+                    </p>
+                </div>
+
+                <p style="color: var(--color-text-muted); max-width: 800px; margin: 0 auto var(--space-8); text-align: center; line-height: 1.8;">
+                    Several propane companies serve our mountain communities. Prices and delivery schedules vary,
+                    so it's worth calling a few to compare. Here are the common providers in the area:
+                </p>
+
+                <!-- EDIT: Update propane provider names as needed -->
+                <div class="propane-grid">
+                    <div class="propane-card">
+                        <p class="propane-card__name">SoCal Propane</p>
+                    </div>
+                    <div class="propane-card">
+                        <p class="propane-card__name">Suburban Propane</p>
+                    </div>
+                    <div class="propane-card">
+                        <p class="propane-card__name">Ferrellgas</p>
+                    </div>
+                    <div class="propane-card">
+                        <p class="propane-card__name">AmeriGas</p>
+                    </div>
+                    <div class="propane-card">
+                        <p class="propane-card__name">Heritage Propane</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p class="info-box__title">
+                        <span>📞</span> Before You Call
+                    </p>
+                    <p class="info-box__text">
+                        If you're unsure which provider to choose, call your preferred company to confirm
+                        they deliver to your specific street. Some providers have limited delivery areas
+                        in our mountain community.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Mail & Delivery -->
+        <section class="section" id="mail">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">📬</div>
+                    <h2 class="section-header__title">Mail & Package Delivery</h2>
+                    <p class="section-header__text">
+                        Mail delivery works differently in our mountain communities.
+                    </p>
+                </div>
+
+                <div style="max-width: 900px; margin: 0 auto;">
+                    <table class="delivery-table">
+                        <thead>
+                            <tr>
+                                <th>Area</th>
+                                <th>ZIP</th>
+                                <th>USPS Street Delivery</th>
+                                <th>UPS/FedEx</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Idyllwild</strong></td>
+                                <td>92549</td>
+                                <td><span class="delivery-status delivery-status--no">❌ No</span></td>
+                                <td>Varies by road access</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pine Cove</strong></td>
+                                <td>92549</td>
+                                <td><span class="delivery-status delivery-status--no">❌ No</span></td>
+                                <td>Varies by road access</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fern Valley</strong></td>
+                                <td>92549</td>
+                                <td><span class="delivery-status delivery-status--no">❌ No</span></td>
+                                <td>Varies by road access</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mountain Center / Garner Valley</strong></td>
+                                <td>92561</td>
+                                <td><span class="delivery-status delivery-status--yes">✓ Yes</span></td>
+                                <td>Normal delivery</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="grid grid--2 mt-12">
+                        <div class="info-box" style="margin: 0;">
+                            <p class="info-box__title">
+                                <span>📮</span> Idyllwild Area (92549)
+                            </p>
+                            <p class="info-box__text">
+                                There is <strong>no street delivery</strong> for USPS mail in Idyllwild, Pine Cove,
+                                or Fern Valley. Residents must obtain a PO Box at the Idyllwild Post Office.
+                                UPS and FedEx may deliver to your home depending on road access — check with
+                                each carrier.
+                            </p>
+                        </div>
+
+                        <div class="info-box" style="margin: 0;">
+                            <p class="info-box__title">
+                                <span>🏠</span> Garner Valley (92561)
+                            </p>
+                            <p class="info-box__text">
+                                Mountain Center and Garner Valley (ZIP 92561) <strong>do have street delivery</strong>
+                                for USPS mail. UPS and FedEx also deliver normally to these areas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help CTA -->
+        <section class="section section--dark cta bg-blueprint">
+            <div class="container">
+                <h2 class="cta__title">Need Help Getting Set Up?</h2>
+                <p class="cta__text">
+                    Moving to the mountain and need help with tech setup? MyGeekMac can help you get your
+                    internet, computers, and smart home devices connected and working smoothly.
+                </p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="/contact.html" class="btn btn--primary btn--large">Contact MyGeekMac</a>
+                    <a href="tel:+19514685674" class="btn btn--outline btn--large">Call (951) 468-5674</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">Josh Pirtle</div>
+                    <p class="footer__tagline">
+                        Local Information Provided by MyGeekMac<br>
+                        Tech Help for Idyllwild, Pine Cove, Fern Valley & Garner Valley
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="/services.html#computer-repair" class="footer__link">Computer Repair</a></li>
+                        <li><a href="/services.html#senior-support" class="footer__link">Senior Support</a></li>
+                        <li><a href="/services.html#ai-consulting" class="footer__link">AI Consulting</a></li>
+                        <li><a href="/services.html#networking" class="footer__link">Home Networking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="/about.html" class="footer__link">About Josh</a></li>
+                        <li><a href="/projects/" class="footer__link">Projects</a></li>
+                        <li><a href="/dispatch/" class="footer__link">Blog</a></li>
+                        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__links">
+                        <li><a href="tel:+19514685674" class="footer__link">(951) 468-5674</a></li>
+                        <li><a href="mailto:josh@mygeekmac.com" class="footer__link">josh@mygeekmac.com</a></li>
+                        <li><span class="footer__link">PO Box 11</span></li>
+                        <li><span class="footer__link">Idyllwild, CA 92549</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Josh Pirtle / MyGeekMac. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer">Google</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+        <div class="cookie-banner__inner">
+            <p class="cookie-banner__text">
+                This website uses cookies to improve your experience and analyze site traffic.
+                By clicking "Accept," you consent to our use of cookies.
+                <a href="/privacy.html">Learn more</a>
+            </p>
+            <div class="cookie-banner__actions">
+                <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Decline</button>
+                <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Cookie consent
+        (function() {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            const declineBtn = document.getElementById('cookie-decline');
+
+            if (!localStorage.getItem('cookie-consent')) {
+                setTimeout(() => banner.classList.add('active'), 1000);
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookie-consent', 'accepted');
+                banner.classList.remove('active');
+            });
+
+            declineBtn.addEventListener('click', () => {
+                localStorage.setItem('cookie-consent', 'declined');
+                banner.classList.remove('active');
+            });
+        })();
+    </script>
+</body>
+</html>
