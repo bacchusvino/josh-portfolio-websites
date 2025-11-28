@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Got the Anthropic AI Story Wrong | The Pirtle Dispatch</title>
+    <meta name="description" content="A breakdown of how the viral 'AI called the FBI' story went off the rails and what actually happened with Anthropic's red-teaming process.">
+    <meta name="keywords" content="Anthropic AI, FBI story, AI safety, red teaming, AI misinformation, Claude AI">
+    <meta name="author" content="Josh Pirtle">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://joshpirtle.com/dispatch/anthropic-ai-story-wrong.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://joshpirtle.com/dispatch/anthropic-ai-story-wrong.html">
+    <meta property="og:title" content="Why We Got the Anthropic AI Story Wrong">
+    <meta property="og:description" content="A breakdown of how the viral 'AI called the FBI' story went off the rails and what actually happened.">
+    <meta property="og:image" content="https://joshpirtle.com/img/og-image.png">
+    <meta property="og:site_name" content="Josh Pirtle">
+    <meta property="article:published_time" content="2025-11-27">
+    <meta property="article:author" content="Josh Pirtle">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why We Got the Anthropic AI Story Wrong">
+    <meta name="twitter:description" content="A breakdown of how the viral 'AI called the FBI' story went off the rails.">
+    <meta name="twitter:image" content="https://joshpirtle.com/img/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230D1B2A' rx='15' width='100' height='100'/><text y='68' x='50' text-anchor='middle' font-size='50' font-weight='bold' fill='%2300D4FF'>JP</text></svg>">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav__inner">
+            <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
+                <span class="nav__logo-icon">JP</span>
+                Josh Pirtle
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" class="nav__link" role="menuitem">Home</a></li>
+                <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
+                <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="/dispatch/" class="nav__link nav__link--active" role="menuitem">Blog</a></li>
+                <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Article Header -->
+        <header class="page-header">
+            <div class="container container--narrow">
+                <a href="/dispatch/" class="btn btn--outline btn--small mb-8" style="margin-bottom: var(--space-8);">← Back to The Pirtle Dispatch</a>
+                <div class="blog-post__meta" style="color: var(--color-gray-300);">
+                    <span>November 27, 2025</span>
+                    <span>•</span>
+                    <span>AI & Media</span>
+                </div>
+                <h1 class="page-header__title" style="text-align: left; font-size: var(--text-4xl);">Why We Got the Anthropic AI Story Wrong</h1>
+                <p class="page-header__text" style="text-align: left;">
+                    What happens when a red-team anecdote turns into a viral myth — and what the real safeguards actually looked like.
+                </p>
+            </div>
+        </header>
+
+        <!-- Article Content -->
+        <article class="section">
+            <div class="container container--narrow">
+                <div class="blog-post">
+                    <div class="blog-post__content">
+                        <p>
+                            When the "AI called the FBI" headline spread, the story felt too wild to ignore. It painted a picture of an AI system that autonomously dialed federal agents like a rogue character from science fiction. But the real account, drawn from Anthropic's frontier model red-teaming, was more mundane — and far more reassuring — than the viral retellings suggested.
+                        </p>
+
+                        <div class="pull-quote">
+                            The AI didn't pick up a phone. Humans in the loop did what safety training told them to do.
+                        </div>
+
+                        <h2>How the story snowballed</h2>
+                        <p>
+                            The original anecdote described an AI model suggesting that human evaluators contact law enforcement after it was prompted with violent extremist content. Somewhere between a technical talk, a news recap, and a social media thread, "the model recommended escalation" warped into "the model autonomously called the FBI." It's a classic example of telephone: small wording shifts turned a controlled test into a spooky fable.
+                        </p>
+
+                        <h2>What actually happened</h2>
+                        <p>
+                            During structured red-team exercises, evaluators pushed the model with high-risk prompts. The model responded with a safety-compliant instruction: consult authorities. A human then followed the red-team playbook and notified the FBI about the test content. The model never placed a call, never acted on its own, and never had the ability to do so. Guardrails worked, and humans stayed in control.
+                        </p>
+
+                        <h2>Why precision matters</h2>
+                        <p>
+                            Sloppy phrasing erodes public trust in AI safety work. When we exaggerate, we make real safeguards look like failures instead of successes. Clear language helps policymakers, journalists, and everyday users understand that "safety alignment" is about predictable, reviewable behavior — not runaway agents improvising on the open internet.
+                        </p>
+
+                        <h2>How to tell these stories responsibly</h2>
+                        <ul>
+                            <li><strong>Separate model suggestions from human actions.</strong> A model proposing escalation isn't the same as the model executing it.</li>
+                            <li><strong>Highlight the controls.</strong> If humans or platform policies prevented harm, that's the core of the story.</li>
+                            <li><strong>Link to source material.</strong> Citations keep discussions grounded and make corrections easier when details drift.</li>
+                        </ul>
+
+                        <p>
+                            When we stay disciplined about the language we use — especially around high-stakes AI tests — we help audiences distinguish between real risk and hype. That clarity is essential for building good policy and practical products.
+                        </p>
+
+                        <hr style="margin: var(--space-16) 0; border: none; border-top: 1px solid var(--color-gray-200);">
+
+                        <h3>Further Reading / Sources</h3>
+                        <ul>
+                            <li><a href="https://www.anthropic.com/news/frontier-threats-red-teaming" target="_blank" rel="noopener noreferrer">Anthropic Blog – Frontier Threats Red Teaming</a></li>
+                            <li><a href="https://www.cbsnews.com/60-minutes/overtime/" target="_blank" rel="noopener noreferrer">60 Minutes Overtime – Interview Coverage</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Article Footer -->
+                    <div class="blog-post__footer">
+                        <div class="grid grid--2">
+                            <div>
+                                <a href="/dispatch/" class="btn btn--secondary">← Back to The Pirtle Dispatch</a>
+                            </div>
+                            <div class="text-right">
+                                <a href="/" class="btn btn--secondary">Home →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- CTA Section -->
+        <section class="section section--alt">
+            <div class="container container--narrow text-center">
+                <h2 class="mb-4">Questions About AI?</h2>
+                <p class="text-muted mb-8">
+                    I help individuals and small businesses understand AI — what it can do, what it can't,
+                    and how to use it practically. No hype, just honest guidance.
+                </p>
+                <a href="/contact.html" class="btn btn--primary">Let's Talk</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">Josh Pirtle</div>
+                    <p class="footer__tagline">
+                        Mobile IT support that comes to you. Patient guidance for seniors,
+                        practical AI for businesses, and real solutions for everyone.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="/services.html#computer-repair" class="footer__link">Computer Repair</a></li>
+                        <li><a href="/services.html#senior-support" class="footer__link">Senior Support</a></li>
+                        <li><a href="/services.html#ai-consulting" class="footer__link">AI Consulting</a></li>
+                        <li><a href="/services.html#networking" class="footer__link">Home Networking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Company</h4>
+                    <ul class="footer__links">
+                        <li><a href="/about.html" class="footer__link">About Josh</a></li>
+                        <li><a href="/dispatch/" class="footer__link">Blog</a></li>
+                        <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                        <li><a href="https://g.page/r/CYkr2-fy_M9qEAI/review" class="footer__link" target="_blank" rel="noopener noreferrer">Reviews</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__heading">Contact</h4>
+                    <ul class="footer__links">
+                        <li><a href="tel:+19514685674" class="footer__link">(951) 468-5674</a></li>
+                        <li><a href="mailto:joscha@mygeekmac.com" class="footer__link">joscha@mygeekmac.com</a></li>
+                        <li><span class="footer__link">PO Box 11</span></li>
+                        <li><span class="footer__link">Idyllwild, CA 92549</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer">Google</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (navToggle && navMenu) {
+            navToggle.addEventListener('click', () => {
+                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', !isExpanded);
+                navMenu.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
