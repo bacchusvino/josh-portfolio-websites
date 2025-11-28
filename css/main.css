@@ -1456,7 +1456,8 @@ select:focus-visible {
 @media print {
     .nav,
     .footer,
-    .btn {
+    .btn,
+    .cookie-banner {
         display: none !important;
     }
 
@@ -1467,5 +1468,99 @@ select:focus-visible {
 
     a[href]::after {
         content: " (" attr(href) ")";
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Cookie Consent Banner
+   -------------------------------------------------------------------------- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-navy);
+    color: var(--color-white);
+    padding: var(--space-6) var(--space-8);
+    z-index: 9998;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(100%);
+    transition: transform var(--transition-base);
+}
+
+.cookie-banner.active {
+    transform: translateY(0);
+}
+
+.cookie-banner__inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+}
+
+.cookie-banner__text {
+    flex: 1;
+    min-width: 280px;
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+}
+
+.cookie-banner__text a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.cookie-banner__text a:hover {
+    color: var(--color-accent-soft);
+}
+
+.cookie-banner__actions {
+    display: flex;
+    gap: var(--space-4);
+    flex-shrink: 0;
+}
+
+.cookie-banner__btn {
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-fast);
+}
+
+.cookie-banner__btn--accept {
+    background: var(--color-accent);
+    color: var(--color-navy);
+}
+
+.cookie-banner__btn--accept:hover {
+    background: var(--color-accent-soft);
+}
+
+.cookie-banner__btn--decline {
+    background: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-gray-500);
+}
+
+.cookie-banner__btn--decline:hover {
+    border-color: var(--color-white);
+}
+
+@media (max-width: 600px) {
+    .cookie-banner__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cookie-banner__actions {
+        width: 100%;
+        justify-content: center;
     }
 }
