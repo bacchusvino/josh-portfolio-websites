@@ -296,6 +296,21 @@
         </div>
     </footer>
 
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+        <div class="cookie-banner__inner">
+            <p class="cookie-banner__text">
+                This website uses cookies to improve your experience and analyze site traffic.
+                By clicking "Accept," you consent to our use of cookies.
+                <a href="/privacy.html">Learn more</a>
+            </p>
+            <div class="cookie-banner__actions">
+                <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Decline</button>
+                <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accept</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
@@ -306,6 +321,27 @@
                 navMenu.classList.toggle('active');
             });
         }
+
+        // Cookie consent
+        (function() {
+            const banner = document.getElementById('cookie-banner');
+            const acceptBtn = document.getElementById('cookie-accept');
+            const declineBtn = document.getElementById('cookie-decline');
+
+            if (!localStorage.getItem('cookie-consent')) {
+                setTimeout(() => banner.classList.add('active'), 1000);
+            }
+
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookie-consent', 'accepted');
+                banner.classList.remove('active');
+            });
+
+            declineBtn.addEventListener('click', () => {
+                localStorage.setItem('cookie-consent', 'declined');
+                banner.classList.remove('active');
+            });
+        })();
     </script>
 </body>
 </html>
