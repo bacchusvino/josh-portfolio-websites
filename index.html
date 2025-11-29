@@ -40,284 +40,165 @@
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    
-<!-- Navigation -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="container nav__inner">
-        <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
-            <span class="nav__logo-icon">JP</span>
-            Josh Pirtle
-        </a>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav__menu" id="nav-menu" role="menubar">
-            <li role="none"><a href="/" class="nav__link nav__link--active" role="menuitem">Home</a></li>
-            <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
-            <li role="none"><a href="/projects/index.html" class="nav__link" role="menuitem">Projects</a></li>
-            <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
-            <li role="none"><a href="/blog/index.html" class="nav__link" role="menuitem">Blog</a></li>
-            <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
-            <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
-        </ul>
-    </div>
-</nav>
-
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container nav__inner">
+            <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
+                <span class="nav__logo-icon">JP</span>
+                Josh Pirtle
+            </a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav__menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="/" class="nav__link nav__link--active" role="menuitem">Home</a></li>
+                <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
+                <li role="none"><a href="/projects/index.html" class="nav__link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="/blog/index.html" class="nav__link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main id="main">
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero__grid"></div>
-            <div class="container hero__content">
-                <div class="hero__text">
-                    <span class="hero__badge">Available for appointments</span>
-                    <h1 class="hero__title">
-                        Mobile IT Support for <span>Seniors</span> & Small Businesses
-                    </h1>
-                    <p class="hero__subtitle">
-                        AI-assisted troubleshooting, patient guidance, and real-world tech solutions.
-                        Serving Idyllwild and communities across Southern California — and available remotely nationwide.
-                    </p>
+        <section class="hero hero--hybrid">
+            <div class="hero__strip" aria-hidden="true"></div>
+            <div class="container hero__layout">
+                <div class="hero__text-block">
+                    <p class="eyebrow">Tech help made human</p>
+                    <h1 class="hero__title">I Make Technology Work for Normal People.</h1>
+                    <p class="hero__subtitle">Computer support, AI help, and simplified tech for everyday life.</p>
                     <div class="btn-group">
-                        <a href="/contact.html" class="btn btn--primary btn--large">Book an Appointment</a>
-                        <a href="/services.html" class="btn btn--outline btn--large">View Services</a>
+                        <a href="/contact.html" class="btn btn--primary btn--large">Book Help Now</a>
+                        <a href="/projects.html" class="btn btn--secondary btn--large">See My Projects</a>
                     </div>
-
-                    <!-- Google Reviews Badge -->
-                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" class="reviews-badge mt-8" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                        <span class="reviews-badge__stars">★★★★★</span>
-                        <span class="reviews-badge__text" style="color: var(--color-gray-300);">
-                            <strong style="color: var(--color-white);">5.0 on Google</strong>
-                            Read Reviews →
-                        </span>
-                    </a>
                 </div>
-                <div class="hero__photo">
-                    <img
-                      src="/img/josh-hero.jpg"
-                      srcset="/img/josh-hero.jpg 1x, /img/josh-hero.jpg 2x"
-                      alt="Josh Pirtle smiling outdoors in front of a beach view on a clear sunny day."
-                      class="hero-photo"
-                      loading="eager"
-                      decoding="async"
-                    />
-                    <div class="hero__accent"></div>
+                <div class="hero__media">
+                    <div class="hero__image-frame">
+                        <img src="/img/hero.jpg" alt="Tech help in action" class="hero__image" loading="eager" decoding="async">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="section section--alt bg-grid" id="services">
+        <!-- What I Do -->
+        <section class="section section--light" id="services">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header section-header--center">
                     <span class="section-header__label">What I Do</span>
-                    <h2 class="section-header__title">Technology Help That Makes Sense</h2>
-                    <p class="section-header__text">
-                        Whether you're a senior learning to video chat with grandkids or a business owner exploring AI,
-                        I meet you where you are — with patience, clarity, and practical solutions.
-                    </p>
+                    <h2 class="section-header__title">Simple, human-first technology support</h2>
                 </div>
-
-                <div class="services-grid">
-                    <div class="card card--service">
-                        <div class="card__icon">🖥️</div>
-                        <h3 class="card__title">Computer Setup & Repair</h3>
-                        <p class="card__text">Mac and PC troubleshooting, virus removal, hardware upgrades, and new computer setup. I make technology work for you.</p>
-                        <a href="/services.html#computer-repair" class="btn btn--secondary btn--small">Learn More</a>
+                <div class="tile-grid">
+                    <div class="tile">
+                        <div class="tile__icon" aria-hidden="true">🖥️</div>
+                        <h3 class="tile__title">Computer Help for Real People</h3>
+                        <p class="tile__text">Email, devices, hacked accounts, backups.</p>
                     </div>
-
-                    <div class="card card--service">
-                        <div class="card__icon">👴</div>
-                        <h3 class="card__title">Senior-Friendly Support</h3>
-                        <p class="card__text">Patient, jargon-free help for older adults. Video calling setup, email assistance, smartphone guidance, and online safety.</p>
-                        <a href="/services.html#senior-support" class="btn btn--secondary btn--small">Learn More</a>
+                    <div class="tile">
+                        <div class="tile__icon" aria-hidden="true">✨</div>
+                        <h3 class="tile__title">AI for Everyday Life</h3>
+                        <p class="tile__text">Tools, organization, writing help, personal automations.</p>
                     </div>
-
-                    <div class="card card--service">
-                        <div class="card__icon">🤖</div>
-                        <h3 class="card__title">AI & Automation</h3>
-                        <p class="card__text">Practical AI solutions for small businesses. Workflow automation, ChatGPT training, and custom tools that save real time.</p>
-                        <a href="/services.html#ai-consulting" class="btn btn--secondary btn--small">Learn More</a>
-                    </div>
-
-                    <div class="card card--service">
-                        <div class="card__icon">🌐</div>
-                        <h3 class="card__title">Home Network & WiFi</h3>
-                        <p class="card__text">WiFi optimization, router setup, network security, and smart home device configuration. Fast, reliable connections throughout your home.</p>
-                        <a href="/services.html#networking" class="btn btn--secondary btn--small">Learn More</a>
+                    <div class="tile">
+                        <div class="tile__icon" aria-hidden="true">📚</div>
+                        <h3 class="tile__title">Coaching & Classes</h3>
+                        <p class="tile__text">Patient, step-by-step tech teaching.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Trust/Stats Section -->
-        <section class="section section--dark bg-blueprint">
-            <div class="container">
-                <div class="stats">
-                    <div class="stat">
-                        <div class="stat__number">22+</div>
-                        <div class="stat__label">Years in IT</div>
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-grid__image">
+                    <div class="about-grid__frame">
+                        <img src="/img/josh-about.jpg" alt="Photo of Josh" loading="lazy">
                     </div>
-                    <div class="stat">
-                        <div class="stat__number">500+</div>
-                        <div class="stat__label">Happy Clients</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__number">5.0</div>
-                        <div class="stat__label">Google Rating</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__number">Same Day</div>
-                        <div class="stat__label">Response Time</div>
-                    </div>
+                </div>
+                <div class="about-grid__content">
+                    <span class="section-header__label">About</span>
+                    <h2>Hi, I’m Joscha.</h2>
+                    <p>I’ve spent 23 years helping real people feel less stressed around technology.</p>
+                    <p>I translate tech into plain English and teach at the pace humans learn.</p>
                 </div>
             </div>
         </section>
 
-        <!-- About Preview Section -->
-        <section class="section" id="about-preview">
+        <!-- Projects -->
+        <section class="section section--light" id="projects">
             <div class="container">
-                <div class="about-intro">
-                    <div>
-                        <span class="section-header__label">Meet Josh</span>
-                        <h2 class="mb-4">Technology With a Human Touch</h2>
-                        <p class="text-lead mb-8">
-                            I'm Josh Pirtle — a technologist who believes the best tech support leaves you feeling smarter,
-                            not smaller. For over two decades, I've helped people untangle their digital lives with patience,
-                            plain language, and genuine care.
-                        </p>
-                        <p class="mb-8">
-                            Based in the mountain community of Idyllwild, California, I provide mobile IT support that
-                            comes to you — whether that's your living room, your office, or a video call from anywhere
-                            in the country. My specialty? Making technology accessible to everyone, especially seniors
-                            who've been told they're "too old" to learn.
-                        </p>
-                        <p class="mb-8">
-                            Beyond tech, I'm a certified cooking instructor, a volunteer leader with the U.S. Naval Sea
-                            Cadet Corps, and a lifelong learner currently deep in the world of AI and voice agents.
-                        </p>
-                        <a href="/about.html" class="btn btn--primary">Learn More About Josh</a>
-                    </div>
-                    <div class="about-photo">
-                        <div class="about-photo__placeholder">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            <p>Photo of Josh<br><small>Add to /img/josh-about.jpg</small></p>
-                        </div>
-                        <!-- Replace with: <img src="img/josh-about.jpg" alt="Josh Pirtle"> -->
-                    </div>
+                <div class="section-header section-header--center">
+                    <span class="section-header__label">Projects</span>
+                    <h2 class="section-header__title">Recent work and experiments</h2>
                 </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="section section--alt" id="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">What Clients Say</span>
-                    <h2 class="section-header__title">Trusted by Families & Businesses</h2>
-                </div>
-
-                <div class="grid grid--3">
-                    <div class="testimonial">
-                        <p class="testimonial__text">
-                            "Josh is incredibly patient and never makes me feel foolish for not understanding something.
-                            He helped me set up FaceTime so I can see my grandchildren — it's changed my life!"
-                        </p>
-                        <div class="testimonial__author">
-                            <div class="testimonial__avatar"></div>
-                            <div>
-                                <div class="testimonial__name">Margaret S.</div>
-                                <div class="testimonial__role">Idyllwild Resident</div>
-                            </div>
+                <div class="projects-grid">
+                    <a class="project-card" href="/projects/index.html">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Project Portfolio</h3>
+                            <p class="project-card__text">Browse the collection of builds, redesigns, and service rollouts.</p>
                         </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <p class="testimonial__text">
-                            "As a small business owner, I needed someone who could explain AI without the hype.
-                            Josh helped us implement practical tools that actually save time."
-                        </p>
-                        <div class="testimonial__author">
-                            <div class="testimonial__avatar"></div>
-                            <div>
-                                <div class="testimonial__name">David K.</div>
-                                <div class="testimonial__role">Local Business Owner</div>
-                            </div>
+                    </a>
+                    <a class="project-card" href="/projects/terry-weber.html">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Terry Weber Showcase</h3>
+                            <p class="project-card__text">Purpose-built site and onboarding materials for an artist.</p>
                         </div>
-                    </div>
-
-                    <div class="testimonial">
-                        <p class="testimonial__text">
-                            "When my computer crashed, Josh came out the same day and recovered everything.
-                            Professional, honest, and fair pricing. Highly recommend!"
-                        </p>
-                        <div class="testimonial__author">
-                            <div class="testimonial__avatar"></div>
-                            <div>
-                                <div class="testimonial__name">Susan M.</div>
-                                <div class="testimonial__role">Hemet, CA</div>
-                            </div>
+                    </a>
+                    <a class="project-card" href="/josh-tech-splash/index.html">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Tech Splash Microsite</h3>
+                            <p class="project-card__text">Landing page experiment focused on clear, fast service booking.</p>
                         </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">
-                        Read More Reviews on Google →
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <!-- Blog Preview Section -->
-        <section class="section" id="blog-preview">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__label">The Pirtle Dispatch</span>
-                    <h2 class="section-header__title">Thoughts on Tech & AI</h2>
-                    <p class="section-header__text">
-                        Notes on navigating the digital world — without the jargon.
-                    </p>
-                </div>
-
-                <div class="blog-list" style="max-width: 800px; margin: 0 auto;">
-                    <article class="card card--blog">
-                        <div class="card__meta">
-                            <span>November 27, 2025</span>
-                            <span>•</span>
-                            <span>AI & Media</span>
-                        </div>
-                        <h3 class="card__title">
-                            <a href="/blog/anthropic-ai-story-wrong.html">Why We Got the Anthropic AI Story Wrong</a>
-                        </h3>
-                        <p class="card__excerpt">
-                            A breakdown of how the viral "AI called the FBI" story went off the rails — and what the real safeguards actually looked like.
-                        </p>
-                        <a href="/blog/anthropic-ai-story-wrong.html" class="btn btn--secondary btn--small">Read Article →</a>
-                    </article>
-                </div>
-
                 <div class="text-center mt-12">
-                    <a href="/blog/index.html" class="btn btn--primary">View All Posts</a>
+                    <a href="projects.html" class="btn btn--primary">See all projects</a>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="section section--dark cta bg-blueprint">
+        <!-- Testimonials -->
+        <section class="section" id="testimonials">
             <div class="container">
-                <h2 class="cta__title">Ready to Get Tech Help?</h2>
-                <p class="cta__text">
-                    Whether you need your computer fixed, help understanding a new device, or want to explore how AI can help your business — I'm here to help.
-                </p>
-                <div class="btn-group" style="justify-content: center;">
-                    <a href="/contact.html" class="btn btn--primary btn--large">Book an Appointment</a>
-                    <a href="tel:+19514685674" class="btn btn--outline btn--large">Call (951) 468-5674</a>
+                <div class="section-header section-header--center">
+                    <span class="section-header__label">Testimonials</span>
+                    <h2 class="section-header__title">People say encouraging things</h2>
                 </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-card__text">“Clear explanations and zero judgment. My email and photos are finally under control.”</p>
+                        <span class="testimonial-card__name">Happy Client</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-card__text">“We set up practical AI tools that actually saved me hours each week.”</p>
+                        <span class="testimonial-card__name">Grateful Small Business</span>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-card__text">“Patient, reliable, and focused on what matters to our family’s tech setup.”</p>
+                        <span class="testimonial-card__name">Local Household</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why People Choose Me -->
+        <section class="section section--light" id="why-me">
+            <div class="container">
+                <div class="section-header section-header--center">
+                    <span class="section-header__label">Why People Choose Me</span>
+                    <h2 class="section-header__title">Support that fits real life</h2>
+                </div>
+                <ul class="why-list">
+                    <li>Patient and clear</li>
+                    <li>No tech jargon</li>
+                    <li>Solutions built around your life</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -325,6 +206,17 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
+            <div class="footer__contact-highlight">
+                <div>
+                    <p class="footer__eyebrow">Call or email anytime</p>
+                    <p class="footer__headline">(951) 468-5674 • josh@mygeekmac.com</p>
+                </div>
+                <div class="footer__social-inline">
+                    <a href="#" aria-label="Placeholder social link">Social 1</a>
+                    <a href="#" aria-label="Placeholder social link">Social 2</a>
+                    <a href="#" aria-label="Placeholder social link">Social 3</a>
+                </div>
+            </div>
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="footer__logo">Josh Pirtle</div>
