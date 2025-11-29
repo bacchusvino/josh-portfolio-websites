@@ -21,6 +21,7 @@
     <meta name="twitter:title" content="Terry S. Weber | CEO & Board Director">
     <meta name="twitter:description" content="Cross-industry executive with 25+ years of C-suite experience in healthcare, retail, and automotive.">
 
+    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👔</text></svg>">
 </head>
@@ -29,28 +30,31 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container nav-container">
-        <a href="/index.html" class="nav-logo" aria-label="Josh Pirtle - Home">Josh Pirtle</a>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+    
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+        <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
+            <span class="nav__logo-icon">JP</span>
+            Josh Pirtle
+        </a>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
         </button>
-        <ul class="nav-menu" id="nav-menu" role="menubar">
-            <li role="none"><a href="/index.html#services" class="nav-link" role="menuitem">Services</a></li>
-            <li role="none"><a href="/projects/" class="nav-link" role="menuitem">Projects</a></li>
-            <li role="none"><a href="/about.html" class="nav-link" role="menuitem">About</a></li>
-            <li role="none"><a href="/contact.html" class="nav-link" role="menuitem">Contact</a></li>
-            <li role="none">
-                <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
-                    <span class="icon-sun" aria-hidden="true">☀️</span>
-                    <span class="icon-moon" aria-hidden="true">🌙</span>
-                </button>
-            </li>
+        <ul class="nav__menu" id="nav-menu" role="menubar">
+            <li role="none"><a href="/" class="nav__link" role="menuitem">Home</a></li>
+            <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
+            <li role="none"><a href="/projects/index.html" class="nav__link" role="menuitem">Projects</a></li>
+            <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
+            <li role="none"><a href="/dispatch/index.html" class="nav__link" role="menuitem">Blog</a></li>
+            <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
+            <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
         </ul>
     </div>
 </nav>
+
 
     <main id="main-content" role="main">
         <!-- Hero Section -->
@@ -172,29 +176,58 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer" role="contentinfo">
+    
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <span class="footer-logo">Josh Pirtle</span>
-                <p class="footer-tagline">"Computers are like Old Testament gods; lots of rules and no mercy." — Joseph Campbell</p>
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <div class="footer__logo">Josh Pirtle</div>
+                <p class="footer__tagline">
+                    Mobile IT support that comes to you. Patient guidance for seniors,
+                    practical AI for businesses, and real solutions for everyone.
+                </p>
             </div>
-            <nav class="footer-nav" aria-label="Footer navigation">
-                <a href="/index.html#services">Services</a>
-                <a href="/projects/">Projects</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-            </nav>
-            <div class="footer-links" aria-label="Social links">
-                <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
-                <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews (opens in new tab)">Google Reviews</a>
-                <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer" aria-label="Facebook page (opens in new tab)">Facebook</a>
+            <div>
+                <h4 class="footer__heading">Services</h4>
+                <ul class="footer__links">
+                    <li><a href="/services.html#computer-repair" class="footer__link">Computer Repair</a></li>
+                    <li><a href="/services.html#senior-support" class="footer__link">Senior Support</a></li>
+                    <li><a href="/services.html#ai-consulting" class="footer__link">AI Consulting</a></li>
+                    <li><a href="/services.html#networking" class="footer__link">Home Networking</a></li>
+                    <li><a href="/local-services.html" class="footer__link">Local Services</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer__heading">Company</h4>
+                <ul class="footer__links">
+                    <li><a href="/about.html" class="footer__link">About Josh</a></li>
+                    <li><a href="/projects/index.html" class="footer__link">Projects</a></li>
+                    <li><a href="/dispatch/index.html" class="footer__link">Blog</a></li>
+                    <li><a href="/contact.html" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer__heading">Contact</h4>
+                <ul class="footer__links">
+                    <li><a href="tel:+19514685674" class="footer__link">(951) 468-5674</a></li>
+                    <li><a href="mailto:josh@mygeekmac.com" class="footer__link">josh@mygeekmac.com</a></li>
+                    <li><span class="footer__link">PO Box 11</span></li>
+                    <li><span class="footer__link">Idyllwild, CA 92549</span></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer__bottom">
             <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer">Google</a>
+            </div>
         </div>
     </div>
 </footer>
+
+    <script src="/main.js" defer></script>
 </body>
 </html>
