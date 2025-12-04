@@ -800,8 +800,14 @@ section {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-6);
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .project-card {
@@ -809,6 +815,9 @@ section {
     border-radius: var(--radius-xl);
     padding: var(--space-7);
     box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     border: 1px solid rgba(13, 26, 45, 0.08);
     transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
     text-decoration: none;
