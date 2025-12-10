@@ -2111,3 +2111,89 @@ body.high-contrast a {
     padding-top: var(--space-lg);
     border-top: 1px solid var(--warm-sand);
 }
+
+/* ==========================================================================
+   Emergency Steps (Remote Support Page)
+   -------------------------------------------------------------------------- */
+.emergency-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.emergency-step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.emergency-step__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: var(--calm-sage);
+    color: white;
+    border-radius: 50%;
+    font-size: var(--text-lg);
+    font-weight: 800;
+}
+
+.emergency-step__content {
+    flex: 1;
+}
+
+.emergency-step__content strong {
+    display: block;
+    font-size: var(--text-lg);
+    color: var(--warm-ink);
+    margin-bottom: var(--space-xs);
+}
+
+.emergency-step__content p {
+    font-size: var(--text-base);
+    color: var(--warm-earth);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Reassurance Box (Remote Support Page)
+   -------------------------------------------------------------------------- */
+.reassurance-box {
+    background: var(--calm-sage-glow);
+    border: 2px solid var(--calm-sage);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.reassurance-box__title {
+    font-size: var(--text-xl);
+    color: var(--calm-sage-dark);
+    margin-bottom: var(--space-md);
+    font-weight: 700;
+}
+
+.reassurance-box p {
+    font-size: var(--text-base);
+    color: var(--warm-ink);
+    line-height: 1.7;
+}
+
+/* ==========================================================================
+   Page Content Wrapper
+   -------------------------------------------------------------------------- */
+.page-content {
+    padding: var(--space-xl) 0 var(--space-4xl);
+}
+
+.mb-xl {
+    margin-bottom: var(--space-3xl);
+}
