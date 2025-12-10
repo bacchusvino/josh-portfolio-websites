@@ -3,324 +3,913 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josh Pirtle | Mobile IT Support for Seniors & Small Businesses</title>
-    <meta name="description" content="Mobile IT Support for Seniors & Small Businesses — Idyllwild & Beyond. AI-assisted troubleshooting, patient guidance, and real-world tech solutions from Josh Pirtle.">
-    <meta name="keywords" content="IT support, senior tech help, computer repair Idyllwild, Mac support, PC support, AI consulting, small business IT">
-    <meta name="author" content="Josh Pirtle">
+    <title>MyGeekMac | Tech Help That Feels Human</title>
+    <meta name="description" content="Calm, patient tech support for real people. I help seniors, small businesses, and anyone feeling overwhelmed by technology. Serving Idyllwild, CA and nearby communities.">
+    <meta name="keywords" content="tech support Idyllwild, senior tech help, computer help, AI guidance, patient tech support">
+    <meta name="author" content="Joshua Pirtle">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://joshpirtle.com/">
+    <link rel="canonical" href="https://mygeekmac.com/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://joshpirtle.com/">
-    <meta property="og:title" content="Josh Pirtle | Mobile IT Support for Seniors & Small Businesses">
-    <meta property="og:description" content="AI-assisted troubleshooting, patient guidance, and real-world tech solutions. Serving Idyllwild and beyond.">
-    <meta property="og:image" content="https://joshpirtle.com/img/og-image.png">
-    <meta property="og:site_name" content="Josh Pirtle">
+    <meta property="og:url" content="https://mygeekmac.com/">
+    <meta property="og:title" content="MyGeekMac | Tech Help That Feels Human">
+    <meta property="og:description" content="Calm, patient tech support for real people. I translate confusing tech into clear decisions.">
+    <meta property="og:image" content="https://mygeekmac.com/img/og-image.png">
+    <meta property="og:site_name" content="MyGeekMac">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://joshpirtle.com/">
-    <meta name="twitter:title" content="Josh Pirtle | Mobile IT Support for Seniors & Small Businesses">
-    <meta name="twitter:description" content="AI-assisted troubleshooting, patient guidance, and real-world tech solutions.">
-    <meta name="twitter:image" content="https://joshpirtle.com/img/og-image.png">
+    <meta name="twitter:url" content="https://mygeekmac.com/">
+    <meta name="twitter:title" content="MyGeekMac | Tech Help That Feels Human">
+    <meta name="twitter:description" content="Calm, patient tech support for real people.">
+    <meta name="twitter:image" content="https://mygeekmac.com/img/og-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230D1B2A' rx='15' width='100' height='100'/><text y='68' x='50' text-anchor='middle' font-size='50' font-weight='bold' fill='%2300D4FF'>JP</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%237C9A92' rx='15' width='100' height='100'/><text y='68' x='50' text-anchor='middle' font-size='50' font-weight='bold' fill='white'>MG</text></svg>">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/helpdesk.css">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
-    <!-- Navigation -->
-    <nav class="nav" role="navigation" aria-label="Main navigation">
-        <div class="container nav__inner">
-            <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
-                <span class="nav__logo-icon">JP</span>
-                Josh Pirtle
+    <!-- Ambient background -->
+    <div class="ambient-bg" aria-hidden="true"></div>
+
+    <!-- Minimal Navigation -->
+    <nav class="nav-minimal" role="navigation" aria-label="Main navigation">
+        <div class="container nav-minimal__inner">
+            <a href="/" class="nav-minimal__logo" aria-label="MyGeekMac - Home">
+                <span class="nav-minimal__logo-icon">MG</span>
+                MyGeekMac
             </a>
-            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <button class="nav-minimal__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav__menu" id="nav-menu" role="menubar">
-                <li role="none"><a href="/" class="nav__link nav__link--active" role="menuitem">Home</a></li>
-                <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
-                <li role="none"><a href="/projects/index.html" class="nav__link" role="menuitem">Projects</a></li>
-                <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
-                <li role="none"><a href="/blog/index.html" class="nav__link" role="menuitem">Blog</a></li>
-                <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
-                <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
-            </ul>
+            <div class="nav-minimal__actions" id="nav-menu">
+                <a href="/about.html" class="nav-minimal__link">About Josh</a>
+                <a href="/ai-guidance.html" class="nav-minimal__link">AI Guidance</a>
+                <a href="/contact.html" class="nav-minimal__cta">Talk to a Human</a>
+            </div>
         </div>
     </nav>
 
     <main id="main">
-        <!-- Hero Section -->
-        <section class="hero hero--hybrid">
-            <div class="hero__strip" aria-hidden="true"></div>
-            <div class="container hero__layout">
-                <div class="hero__text-block">
-                    <p class="eyebrow">Tech help made human</p>
-                    <h1 class="hero__title">I Make Technology Work for Normal People.</h1>
-                    <p class="hero__subtitle">Computer support, AI help, and simplified tech for everyday life.</p>
-                    <div class="btn-group">
-                        <a href="/contact.html" class="btn btn--primary btn--large">Book Help Now</a>
-                        <a href="/projects.html" class="btn btn--secondary btn--large">See My Projects</a>
-                    </div>
-                </div>
-                <div class="hero__media">
-                    <div class="hero__image-frame">
-                        <img src="/img/hero.jpg" alt="Tech help in action" class="hero__image" loading="eager" decoding="async">
-                    </div>
+        <!-- Landing Screen - The Diagnostic Question -->
+        <section class="landing" aria-labelledby="landing-question">
+            <p class="landing__greeting">Tech Help in Idyllwild, CA</p>
+            <h1 id="landing-question" class="landing__question">What's going on with your tech?</h1>
+
+            <!-- Scenario Buttons - Large, high-contrast device control buttons -->
+            <div class="scenario-grid" role="group" aria-label="Choose what you need help with">
+                <button class="scenario-btn" data-panel="device-issues" type="button" aria-describedby="desc-phone">
+                    <span class="scenario-btn__icon" aria-hidden="true">
+                        <span style="font-size: 1.75rem;">📱</span>
+                    </span>
+                    <span class="scenario-btn__label">My phone won't cooperate</span>
+                    <span id="desc-phone" class="sr-only">Get help with phone issues</span>
+                </button>
+
+                <button class="scenario-btn" data-panel="computer" type="button" aria-describedby="desc-computer">
+                    <span class="scenario-btn__icon" aria-hidden="true">
+                        <span style="font-size: 1.75rem;">💻</span>
+                    </span>
+                    <span class="scenario-btn__label">My computer is acting up</span>
+                    <span id="desc-computer" class="sr-only">Get help with computer issues</span>
+                </button>
+
+                <button class="scenario-btn" data-panel="security" type="button" aria-describedby="desc-security">
+                    <span class="scenario-btn__icon" aria-hidden="true">
+                        <span style="font-size: 1.75rem;">🔐</span>
+                    </span>
+                    <span class="scenario-btn__label">I'm worried about scams or hacking</span>
+                    <span id="desc-security" class="sr-only">Get help with security concerns</span>
+                </button>
+
+                <button class="scenario-btn" data-panel="learning" type="button" aria-describedby="desc-learning">
+                    <span class="scenario-btn__icon" aria-hidden="true">
+                        <span style="font-size: 1.75rem;">🧑‍🏫</span>
+                    </span>
+                    <span class="scenario-btn__label">I want help learning</span>
+                    <span id="desc-learning" class="sr-only">Get patient help learning technology</span>
+                </button>
+            </div>
+
+            <!-- Secondary options -->
+            <div class="landing__secondary">
+                <span class="landing__or">or</span>
+                <a href="/contact.html" class="landing__alt-link">
+                    Just talk to Josh
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Trust indicator -->
+            <div class="landing__trust">
+                <div class="trust-badge">
+                    <span class="trust-badge__icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </span>
+                    23 years helping real people with technology
                 </div>
             </div>
         </section>
 
-        <!-- What I Do -->
-        <section class="section section--light" id="services">
+        <!-- Trust Stories -->
+        <section class="trust-stories" id="stories" aria-labelledby="stories-title">
             <div class="container">
-                <div class="section-header section-header--center">
-                    <span class="section-header__label">What I Do</span>
-                    <h2 class="section-header__title">Simple, human-first technology support</h2>
+                <div class="section-intro">
+                    <p class="section-intro__label">People I've Helped</p>
+                    <h2 id="stories-title" class="section-intro__title">Real stories, not sales pitches</h2>
                 </div>
-                <div class="tile-grid">
-                    <div class="tile">
-                        <div class="tile__icon" aria-hidden="true">🖥️</div>
-                        <h3 class="tile__title">Computer Help for Real People</h3>
-                        <p class="tile__text">Email, devices, hacked accounts, backups.</p>
-                    </div>
-                    <div class="tile">
-                        <div class="tile__icon" aria-hidden="true">✨</div>
-                        <h3 class="tile__title">AI for Everyday Life</h3>
-                        <p class="tile__text">Tools, organization, writing help, personal automations.</p>
-                    </div>
-                    <div class="tile">
-                        <div class="tile__icon" aria-hidden="true">📚</div>
-                        <h3 class="tile__title">Coaching & Classes</h3>
-                        <p class="tile__text">Patient, step-by-step tech teaching.</p>
-                    </div>
+
+                <div class="trust-stories__grid">
+                    <article class="story-card">
+                        <blockquote class="story-card__quote">
+                            "I'd been avoiding my computer for months because it was so slow and confusing. Josh came over, cleaned it up, and taught me how to keep it running well. Now I actually enjoy using it again."
+                        </blockquote>
+                        <p class="story-card__who">Margaret, retired teacher</p>
+                        <p class="story-card__context">Needed her computer to work simply and reliably</p>
+                    </article>
+
+                    <article class="story-card">
+                        <blockquote class="story-card__quote">
+                            "Someone called claiming my computer had a virus. I almost gave them money. Josh helped me understand what was real and what was a scam. He never made me feel stupid for almost falling for it."
+                        </blockquote>
+                        <p class="story-card__who">Robert, local business owner</p>
+                        <p class="story-card__context">Almost fell for a tech support scam</p>
+                    </article>
+
+                    <article class="story-card">
+                        <blockquote class="story-card__quote">
+                            "I wanted to try AI tools for my small business but didn't know where to start. Josh showed me which ones actually help and which ones are hype. Saved me from wasting money on subscriptions I didn't need."
+                        </blockquote>
+                        <p class="story-card__who">Sarah, artist and shop owner</p>
+                        <p class="story-card__context">Curious about AI but overwhelmed by options</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- About -->
-        <section class="section" id="about">
-            <div class="container about-grid">
-                <div class="about-grid__image">
-                    <div class="about-grid__frame">
-                        <img src="/img/josh-about.jpg" alt="Photo of Josh" loading="lazy">
-                    </div>
-                </div>
-                <div class="about-grid__content">
-                    <span class="section-header__label">About</span>
-                    <h2>Hi, I’m Joscha.</h2>
-                    <p>I’ve spent 23 years helping real people feel less stressed around technology.</p>
-                    <p>I translate tech into plain English and teach at the pace humans learn.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="section section--light" id="projects">
+        <!-- About Section -->
+        <section class="about-section" id="about" aria-labelledby="about-title">
             <div class="container">
-                <div class="section-header section-header--center">
-                    <span class="section-header__label">Projects</span>
-                    <h2 class="section-header__title">Recent work and experiments</h2>
-                </div>
-                <div class="projects-grid">
-                    <a class="project-card" href="/projects/index.html">
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Project Portfolio</h3>
-                            <p class="project-card__text">Browse builds, redesigns, and service rollouts.</p>
+                <div class="about-grid">
+                    <div class="about-photo">
+                        <div class="about-photo__frame">
+                            <img src="/img/josh-about.jpg" alt="Josh Pirtle" class="about-photo__img" loading="lazy">
                         </div>
-                    </a>
-                    <a class="project-card" href="https://terrydemo.netlify.app" target="_blank" rel="noopener noreferrer">
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Terry Weber Showcase</h3>
-                            <p class="project-card__text">Purpose-built site and onboarding materials for an artist.</p>
+                    </div>
+                    <div class="about-content">
+                        <p class="about-content__label">About Josh</p>
+                        <h2 id="about-title" class="about-content__title">Hi, I'm Joscha.</h2>
+                        <p class="about-content__text">
+                            I've spent 23 years helping real people feel less stressed around technology.
+                            I don't sell fear or make you feel bad about what you don't know.
+                            I just sit with you, figure out what's actually wrong, and explain your options in plain English.
+                        </p>
+                        <p class="about-content__text">
+                            I live in Idyllwild and serve the mountain communities nearby.
+                            When you call, you get me—not a call center, not a chatbot.
+                        </p>
+                        <div class="about-content__values">
+                            <span class="value-tag">
+                                <span class="value-tag__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                Patient
+                            </span>
+                            <span class="value-tag">
+                                <span class="value-tag__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                No jargon
+                            </span>
+                            <span class="value-tag">
+                                <span class="value-tag__icon">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </span>
+                                Judgment-free
+                            </span>
                         </div>
-                    </a>
-                    <a class="project-card" href="/josh-tech-splash/index.html">
-                        <div class="project-card__content">
-                            <h3 class="project-card__title">Tech Splash Microsite</h3>
-                            <p class="project-card__text">Landing page focused on clear, fast service booking.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="projects.html" class="btn btn--primary">See all projects</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials -->
-        <section class="section" id="testimonials">
+        <!-- AI Guidance Preview -->
+        <section class="ai-section" id="ai" aria-labelledby="ai-title">
             <div class="container">
-                <div class="section-header section-header--center">
-                    <span class="section-header__label">Testimonials</span>
-                    <h2 class="section-header__title">People say encouraging things</h2>
+                <div class="section-intro">
+                    <p class="section-intro__label">Human-First AI Guidance</p>
+                    <h2 id="ai-title" class="section-intro__title">AI can help. It can also waste your time.</h2>
+                    <p class="text-muted">I help you figure out which is which.</p>
                 </div>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p class="testimonial-card__text">“Clear explanations and zero judgment. My email and photos are finally under control.”</p>
-                        <span class="testimonial-card__name">Happy Client</span>
+
+                <div class="ai-grid">
+                    <div class="ai-card ai-card--yes">
+                        <div class="ai-card__header">
+                            <span class="ai-card__icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <h3 class="ai-card__title">AI is useful for...</h3>
+                        </div>
+                        <ul class="ai-card__list">
+                            <li>Drafting emails when you're stuck</li>
+                            <li>Organizing scattered notes</li>
+                            <li>Brainstorming ideas for your business</li>
+                            <li>Explaining things in simpler terms</li>
+                            <li>Routine writing tasks that take too long</li>
+                        </ul>
                     </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-card__text">“We set up practical AI tools that actually saved me hours each week.”</p>
-                        <span class="testimonial-card__name">Grateful Small Business</span>
+
+                    <div class="ai-card ai-card--no">
+                        <div class="ai-card__header">
+                            <span class="ai-card__icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                            </span>
+                            <h3 class="ai-card__title">AI is not great for...</h3>
+                        </div>
+                        <ul class="ai-card__list">
+                            <li>Important decisions you don't understand</li>
+                            <li>Legal, medical, or financial advice</li>
+                            <li>Anything you can't verify yourself</li>
+                            <li>Personal conversations that matter</li>
+                            <li>Replacing your own judgment</li>
+                        </ul>
                     </div>
-                    <div class="testimonial-card">
-                        <p class="testimonial-card__text">“Patient, reliable, and focused on what matters to our family’s tech setup.”</p>
-                        <span class="testimonial-card__name">Local Household</span>
-                    </div>
+                </div>
+
+                <div class="text-center mt-xl">
+                    <a href="/ai-guidance.html" class="btn-action btn-action--secondary" style="display: inline-flex; width: auto; padding: var(--space-md) var(--space-xl);">
+                        Learn more about AI guidance
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Why People Choose Me -->
-        <section class="section section--light" id="why-me">
+        <!-- Pricing -->
+        <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
             <div class="container">
-                <div class="section-header section-header--center">
-                    <span class="section-header__label">Why People Choose Me</span>
-                    <h2 class="section-header__title">Support that fits real life</h2>
+                <div class="section-intro">
+                    <p class="section-intro__label">Simple Pricing</p>
+                    <h2 id="pricing-title" class="section-intro__title">No hourly guessing games</h2>
                 </div>
-                <ul class="why-list">
-                    <li>Patient and clear</li>
-                    <li>No tech jargon</li>
-                    <li>Solutions built around your life</li>
-                </ul>
+
+                <div class="pricing-card">
+                    <p class="pricing-card__label">Standard Visit</p>
+                    <p class="pricing-card__price">$85 <span>flat rate</span></p>
+                    <p class="pricing-card__note">Most issues resolved in one visit</p>
+
+                    <ul class="pricing-card__includes">
+                        <li>In-home or on-site visit</li>
+                        <li>Diagnosis of the actual problem</li>
+                        <li>Plain-English explanation of options</li>
+                        <li>Resolution of most common issues</li>
+                        <li>Follow-up call if questions come up</li>
+                    </ul>
+
+                    <a href="/contact.html" class="btn-action btn-action--primary pricing-card__cta">
+                        Schedule a Visit
+                    </a>
+                </div>
+
+                <p class="text-center text-muted mt-xl" style="font-size: var(--text-sm);">
+                    Complex projects quoted separately. No surprises.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact / Booking -->
+        <section class="booking-section" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="booking-grid">
+                    <div class="booking-info">
+                        <h2 id="contact-title" class="booking-info__title">Let's figure this out together</h2>
+                        <p class="booking-info__text">
+                            Call, text, or email. I respond personally—usually within a few hours.
+                            If you're not sure what you need, just describe what's happening. I'll help you figure it out.
+                        </p>
+
+                        <div class="contact-item">
+                            <span class="contact-item__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="contact-item__label">Call or text</p>
+                                <p class="contact-item__value"><a href="tel:+19514685674">(951) 468-5674</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-item__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="contact-item__label">Email</p>
+                                <p class="contact-item__value"><a href="mailto:josh@mygeekmac.com">josh@mygeekmac.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-item__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="contact-item__label">Service area</p>
+                                <p class="contact-item__value">Idyllwild + nearby mountain communities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <h3 class="booking-form__title">Send a message</h3>
+
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact" class="form-label">Phone or email</label>
+                            <input type="text" id="contact" name="contact" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="issue" class="form-label">What's going on?</label>
+                            <select id="issue" name="issue" class="form-select">
+                                <option value="">Select one (optional)</option>
+                                <option value="device-problem">My device isn't working right</option>
+                                <option value="security-concern">I'm worried about security or scams</option>
+                                <option value="ai-guidance">I want help with AI tools</option>
+                                <option value="learning">I want to learn tech better</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Tell me more (optional)</label>
+                            <textarea id="message" name="message" class="form-textarea" placeholder="Describe what's happening, and I'll get back to you with next steps."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-action btn-action--primary">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer__contact-highlight">
-                <div>
-                    <p class="footer__eyebrow">Call or email anytime</p>
-                    <p class="footer__headline">(951) 468-5674 • josh@mygeekmac.com</p>
-                </div>
-                <div class="footer__social-inline">
-                    <a href="#" aria-label="Placeholder social link">Social 1</a>
-                    <a href="#" aria-label="Placeholder social link">Social 2</a>
-                    <a href="#" aria-label="Placeholder social link">Social 3</a>
+    <!-- Sliding Panels for Scenarios -->
+    <div class="panel-overlay" id="panel-overlay" aria-hidden="true"></div>
+
+    <!-- Panel: Phone Issues -->
+    <aside class="panel" id="panel-device-issues" role="dialog" aria-labelledby="panel-device-title" aria-hidden="true">
+        <div class="panel__header">
+            <button class="panel__back" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <button class="panel__close" type="button" aria-label="Close panel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="panel__content">
+            <h2 id="panel-device-title" class="panel__title">My device won't cooperate</h2>
+            <p class="panel__subtitle">
+                Phones, computers, tablets—they all have moments. Let's figure out what's actually wrong before assuming the worst.
+            </p>
+
+            <div class="first-step">
+                <p class="first-step__label">Do this first</p>
+                <p class="first-step__text">Turn it completely off (not sleep), wait 30 seconds, turn it back on. Sounds simple, but it fixes about 40% of issues.</p>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">Common causes</p>
+                <div class="panel-section__content">
+                    <p><strong>Running slow?</strong> Usually too many things running, or storage is full. Both fixable.</p>
+                    <p><strong>Won't turn on?</strong> Often a battery or power issue. Sometimes just needs to charge longer than you'd expect.</p>
+                    <p><strong>Acting strange?</strong> Could be an update that went sideways, or an app causing problems.</p>
+                    <p class="mb-0"><strong>Error messages?</strong> Write down exactly what it says. That's the clue we need.</p>
                 </div>
             </div>
-            <div class="footer__grid">
-                <div class="footer__brand">
-                    <div class="footer__logo">Josh Pirtle</div>
-                    <p class="footer__tagline">
-                        Mobile IT support that comes to you. Patient guidance for seniors,
-                        practical AI for businesses, and real solutions for everyone.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="footer__heading">Services</h4>
-                    <ul class="footer__links">
-                        <li><a href="/services.html#computer-repair" class="footer__link">Computer Repair</a></li>
-                        <li><a href="/services.html#senior-support" class="footer__link">Senior Support</a></li>
-                        <li><a href="/services.html#ai-consulting" class="footer__link">AI Consulting</a></li>
-                        <li><a href="/services.html#networking" class="footer__link">Home Networking</a></li>
-                        <li><a href="/local-services.html" class="footer__link">Local Services</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer__heading">Company</h4>
-                    <ul class="footer__links">
-                        <li><a href="/about.html" class="footer__link">About Josh</a></li>
-                        <li><a href="/projects/index.html" class="footer__link">Projects</a></li>
-                        <li><a href="/blog/index.html" class="footer__link">Blog</a></li>
-                        <li><a href="/contact.html" class="footer__link">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="footer__heading">Contact</h4>
-                    <ul class="footer__links">
-                        <li><a href="tel:+19514685674" class="footer__link">(951) 468-5674</a></li>
-                        <li><a href="mailto:josh@mygeekmac.com" class="footer__link">josh@mygeekmac.com</a></li>
-                        <li><span class="footer__link">PO Box 11</span></li>
-                        <li><span class="footer__link">Idyllwild, CA 92549</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
-                <div class="footer__social">
-                    <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-                    <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews">Google</a>
-                </div>
+
+            <div class="panel__actions">
+                <button type="button" class="btn-action btn-action--primary" data-open-discount>
+                    Talk to Josh
+                </button>
+                <a href="tel:+19514685674" class="btn-action btn-action--secondary">
+                    Call now: (951) 468-5674
+                </a>
             </div>
         </div>
-    </footer>
+    </aside>
 
-    <!-- Cookie Consent Banner -->
-    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
-        <div class="cookie-banner__inner">
-            <p class="cookie-banner__text">
-                This website uses cookies to improve your experience and analyze site traffic.
-                By clicking "Accept," you consent to our use of cookies.
-                <a href="/privacy.html">Learn more</a>
+    <!-- Panel: Computer Issues -->
+    <aside class="panel" id="panel-computer" role="dialog" aria-labelledby="panel-computer-title" aria-hidden="true">
+        <div class="panel__header">
+            <button class="panel__back" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <button class="panel__close" type="button" aria-label="Close panel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="panel__content">
+            <h2 id="panel-computer-title" class="panel__title">My computer is acting up</h2>
+            <p class="panel__subtitle">
+                Computers can be frustrating when they don't work right. Let's figure out what's happening and get you back on track.
             </p>
-            <div class="cookie-banner__actions">
-                <button class="cookie-banner__btn cookie-banner__btn--decline" id="cookie-decline">Decline</button>
-                <button class="cookie-banner__btn cookie-banner__btn--accept" id="cookie-accept">Accept</button>
+
+            <div class="first-step">
+                <p class="first-step__label">Do this first</p>
+                <p class="first-step__text">Restart your computer completely—shut it down, wait 30 seconds, then turn it back on. This solves many problems and gives us a clean starting point.</p>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">Common computer issues</p>
+                <div class="panel-section__content">
+                    <p><strong>Running very slowly?</strong> Often caused by too many programs starting up automatically, low storage space, or the computer just needing a tune-up.</p>
+                    <p><strong>Won't start properly?</strong> Could be a simple software issue or something with the power supply. Don't panic—most of these are fixable.</p>
+                    <p><strong>Strange pop-ups or messages?</strong> Write down what they say. This helps me understand if it's a real problem or just an annoying ad.</p>
+                    <p class="mb-0"><strong>Can't connect to internet?</strong> Try restarting your modem and router first. Unplug them, wait 30 seconds, plug back in.</p>
+                </div>
+            </div>
+
+            <div class="panel__actions">
+                <button type="button" class="btn-action btn-action--primary" data-open-discount>
+                    Talk to Josh
+                </button>
+                <a href="tel:+19514685674" class="btn-action btn-action--secondary">
+                    Call now: (951) 468-5674
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Panel: Security Concerns -->
+    <aside class="panel" id="panel-security" role="dialog" aria-labelledby="panel-security-title" aria-hidden="true">
+        <div class="panel__header">
+            <button class="panel__back" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <button class="panel__close" type="button" aria-label="Close panel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="panel__content">
+            <h2 id="panel-security-title" class="panel__title">I'm worried about scams or hacking</h2>
+            <p class="panel__subtitle">
+                Take a breath. Most "hacks" are actually phishing scams or false alarms. Let's figure out what's real.
+            </p>
+
+            <div class="first-step">
+                <p class="first-step__label">Do this first</p>
+                <p class="first-step__text">Don't click anything else, don't call any numbers on your screen, and don't give anyone remote access. If someone called you about a virus, hang up—it's a scam.</p>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">Signs it might be a scam (not a real hack)</p>
+                <div class="panel-section__content">
+                    <p><strong>Pop-up with a phone number?</strong> That's a scam. Real security warnings don't include phone numbers.</p>
+                    <p><strong>Someone called you?</strong> Microsoft, Apple, and Google never call you first. Ever.</p>
+                    <p><strong>Urgency and fear?</strong> Scammers create panic on purpose. Real problems don't have countdown timers.</p>
+                    <p class="mb-0"><strong>Asking for gift cards or wire transfers?</strong> 100% scam. No legitimate company accepts payment this way.</p>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">If you already gave access or money</p>
+                <div class="panel-section__content">
+                    <p><strong>Don't feel embarrassed.</strong> These scams are sophisticated and happen to smart people every day.</p>
+                    <p><strong>Contact your bank immediately</strong> if you sent money or shared financial information.</p>
+                    <p class="mb-0"><strong>Call me.</strong> I can help assess the damage and secure your accounts.</p>
+                </div>
+            </div>
+
+            <div class="panel__actions">
+                <a href="tel:+19514685674" class="btn-action btn-action--primary">
+                    Call Josh now: (951) 468-5674
+                </a>
+                <button type="button" class="btn-action btn-action--secondary" data-open-discount>
+                    Send a message instead
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Panel: AI Help -->
+    <aside class="panel" id="panel-ai-help" role="dialog" aria-labelledby="panel-ai-title" aria-hidden="true">
+        <div class="panel__header">
+            <button class="panel__back" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <button class="panel__close" type="button" aria-label="Close panel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="panel__content">
+            <h2 id="panel-ai-title" class="panel__title">AI confuses me. Should I use it?</h2>
+            <p class="panel__subtitle">
+                Honest answer: maybe. AI is genuinely useful for some things and overhyped for others. Let's figure out if it makes sense for your life.
+            </p>
+
+            <div class="first-step">
+                <p class="first-step__label">Start here</p>
+                <p class="first-step__text">Think of one repetitive task that annoys you—writing emails, organizing info, summarizing long documents. That's where AI actually helps.</p>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">The honest truth about AI</p>
+                <div class="panel-section__content">
+                    <p><strong>It's a tool, not magic.</strong> AI won't solve problems you don't understand. It amplifies what you already know.</p>
+                    <p><strong>It makes mistakes.</strong> Confidently. You need to check its work, especially for facts.</p>
+                    <p><strong>Free versions are often enough.</strong> Don't pay for subscriptions until you know you need them.</p>
+                    <p class="mb-0"><strong>Privacy matters.</strong> Don't put sensitive information into AI tools without understanding where that data goes.</p>
+                </div>
+            </div>
+
+            <div class="panel__actions">
+                <a href="/ai-guidance.html" class="btn-action btn-action--primary">
+                    Learn more about AI guidance
+                </a>
+                <button type="button" class="btn-action btn-action--secondary" data-open-discount>
+                    Ask Josh what makes sense for you
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Panel: Learning Tech -->
+    <aside class="panel" id="panel-learning" role="dialog" aria-labelledby="panel-learning-title" aria-hidden="true">
+        <div class="panel__header">
+            <button class="panel__back" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back
+            </button>
+            <button class="panel__close" type="button" aria-label="Close panel">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+        </div>
+        <div class="panel__content">
+            <h2 id="panel-learning-title" class="panel__title">I want help learning tech</h2>
+            <p class="panel__subtitle">
+                Learning tech isn't about memorizing steps—it's about understanding enough to figure things out when they change. I teach at your pace, not mine.
+            </p>
+
+            <div class="first-step">
+                <p class="first-step__label">My approach</p>
+                <p class="first-step__text">We focus on what you actually want to do, not generic lessons. Want to video call your grandkids? We'll learn that. Need to manage your business email? We'll tackle that.</p>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">How lessons work</p>
+                <div class="panel-section__content">
+                    <p><strong>One-on-one, at your place.</strong> You learn best on your own devices, in your own environment.</p>
+                    <p><strong>Written notes.</strong> I leave you with simple instructions you can reference later.</p>
+                    <p><strong>No judgment.</strong> There are no stupid questions. If you're confused, the explanation wasn't good enough—that's on me.</p>
+                    <p class="mb-0"><strong>Practice between sessions.</strong> I'll suggest small things to try so the skills stick.</p>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <p class="panel-section__label">Popular topics</p>
+                <div class="panel-section__content">
+                    <p>Email and calendar basics • Photo organization • Video calls • Password management • Avoiding scams • iPhone/iPad fundamentals • Computer maintenance • Backing up important files</p>
+                </div>
+            </div>
+
+            <div class="panel__actions">
+                <button type="button" class="btn-action btn-action--primary" data-open-discount>
+                    Schedule a lesson
+                </button>
+                <a href="tel:+19514685674" class="btn-action btn-action--secondary">
+                    Call to discuss: (951) 468-5674
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Rate Question Modal (Senior + Military Discounts) -->
+    <div class="discount-modal" id="discount-modal" role="dialog" aria-labelledby="rate-question-title" aria-modal="true">
+        <div class="discount-modal__card">
+
+            <!-- Step 1: Rate Question -->
+            <div id="rate-question-view" class="panel-view active">
+                <h2 id="rate-question-title" class="discount-modal__question">A quick question about your rate</h2>
+                <p class="rate-question__intro">
+                    I offer special rates for two groups of clients.<br>
+                    Please choose the one that fits you best.
+                </p>
+
+                <div class="rate-options" role="radiogroup" aria-label="Rate options">
+                    <label class="rate-option" data-rate="senior">
+                        <input type="radio" name="rate-selection" value="senior" class="rate-option__input">
+                        <span class="rate-option__card">
+                            <span class="rate-option__icon">👴</span>
+                            <span class="rate-option__content">
+                                <span class="rate-option__title">Senior Super Human</span>
+                                <span class="rate-option__subtitle">I'm age 65 or older</span>
+                            </span>
+                            <span class="rate-option__check" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                        </span>
+                    </label>
+
+                    <label class="rate-option" data-rate="military">
+                        <input type="radio" name="rate-selection" value="military" class="rate-option__input">
+                        <span class="rate-option__card">
+                            <span class="rate-option__icon">🎖️</span>
+                            <span class="rate-option__content">
+                                <span class="rate-option__title">Military Thank You</span>
+                                <span class="rate-option__subtitle">I have served or am serving in the military</span>
+                            </span>
+                            <span class="rate-option__check" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                        </span>
+                    </label>
+
+                    <label class="rate-option" data-rate="standard">
+                        <input type="radio" name="rate-selection" value="standard" class="rate-option__input">
+                        <span class="rate-option__card">
+                            <span class="rate-option__icon">👋</span>
+                            <span class="rate-option__content">
+                                <span class="rate-option__title">None of these</span>
+                                <span class="rate-option__subtitle">Standard rate is fine</span>
+                            </span>
+                            <span class="rate-option__check" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+
+                <p class="rate-question__helper">
+                    If more than one applies, choose the one you'd like to use for your rate.
+                </p>
+
+                <div class="rate-question__actions">
+                    <button type="button" class="btn-action btn-action--primary" id="rate-continue" disabled>
+                        Continue
+                    </button>
+                    <button type="button" class="discount-modal__skip" id="rate-skip">
+                        Skip this question
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2a: Senior Rate Confirmation -->
+            <div id="rate-senior-view" class="panel-view">
+                <div class="rate-confirmation">
+                    <span class="rate-confirmation__badge rate-confirmation__badge--senior">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Senior Super Human Rate
+                    </span>
+                    <h2 class="rate-confirmation__heading">You qualify for my Senior "Super Human" rate</h2>
+                    <p class="rate-confirmation__text">
+                        Thank you for the experience and perspective you bring.
+                    </p>
+                    <p class="rate-confirmation__price">
+                        Your visit rate is <strong>$60/hr instead of $80/hr</strong>.
+                    </p>
+                    <p class="rate-confirmation__subtext">
+                        Same patient help, just a little easier on the budget.
+                    </p>
+                    <div class="super-human-note">
+                        <p style="margin: 0;">
+                            In some countries, this is called being "<strong>Super Human</strong>." I like that.
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-top: var(--space-xl);">
+                    <button type="button" class="btn-action btn-action--primary" id="senior-continue">
+                        Continue to Contact Options
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2b: Military Rate Confirmation -->
+            <div id="rate-military-view" class="panel-view">
+                <div class="rate-confirmation">
+                    <span class="rate-confirmation__badge rate-confirmation__badge--military">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Military Thank You Rate
+                    </span>
+                    <h2 class="rate-confirmation__heading">You qualify for my Military "Thank You" rate</h2>
+                    <p class="rate-confirmation__text">
+                        Thank you for your service.
+                    </p>
+                    <p class="rate-confirmation__price">
+                        Your visit rate is <strong>$60/hr instead of $80/hr</strong>.
+                    </p>
+                    <p class="rate-confirmation__subtext">
+                        We'll take our time and make sure things are set up right.
+                    </p>
+                    <div class="military-note">
+                        <p style="margin: 0;">
+                            This rate is my way of saying thank you, not a limited-time promotion.
+                        </p>
+                    </div>
+                </div>
+                <div style="margin-top: var(--space-xl);">
+                    <button type="button" class="btn-action btn-action--primary" id="military-continue">
+                        Continue to Contact Options
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2c: Standard Rate Confirmation -->
+            <div id="rate-standard-view" class="panel-view">
+                <div class="rate-confirmation">
+                    <span class="rate-confirmation__badge rate-confirmation__badge--standard">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Standard Visit Rate
+                    </span>
+                    <h2 class="rate-confirmation__heading">Your standard visit rate</h2>
+                    <p class="rate-confirmation__text">
+                        My standard rate is <strong>$80/hr</strong> for on-site or remote visits.
+                    </p>
+                    <p class="rate-confirmation__subtext">
+                        You'll always know the cost before we start.
+                    </p>
+                </div>
+                <div style="margin-top: var(--space-xl);">
+                    <button type="button" class="btn-action btn-action--primary" id="standard-continue">
+                        Continue to Contact Options
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Contact Options -->
+            <div id="rate-contact-view" class="panel-view">
+                <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-sm);">How would you like to reach me?</h2>
+                <p style="font-size: var(--text-sm); color: var(--warm-earth); margin-bottom: var(--space-lg);">
+                    I answer as quickly as I can. If it's urgent, calling is best.
+                </p>
+
+                <div class="contact-options">
+                    <a href="tel:+19514685674" class="contact-option">
+                        <span class="contact-option__icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </span>
+                        <span class="contact-option__text">
+                            <span class="contact-option__label">Call Josh</span>
+                            <span class="contact-option__detail">(951) 468-5674 — tap to dial</span>
+                        </span>
+                    </a>
+
+                    <a href="sms:+19514685674" class="contact-option">
+                        <span class="contact-option__icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </span>
+                        <span class="contact-option__text">
+                            <span class="contact-option__label">Text Josh</span>
+                            <span class="contact-option__detail">Send a quick text message</span>
+                        </span>
+                    </a>
+
+                    <a href="mailto:josh@mygeekmac.com" class="contact-option">
+                        <span class="contact-option__icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </span>
+                        <span class="contact-option__text">
+                            <span class="contact-option__label">Email Josh</span>
+                            <span class="contact-option__detail">josh@mygeekmac.com</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Caregiver Option -->
+                <div class="caregiver-toggle">
+                    <label class="caregiver-toggle__header">
+                        <input type="checkbox" class="caregiver-toggle__checkbox" id="include-caregiver">
+                        <span class="caregiver-toggle__label">Include a family member or caregiver on messages about this visit</span>
+                    </label>
+                    <p class="caregiver-toggle__helper">
+                        Optional. This lets someone you trust see updates and instructions too.
+                    </p>
+                    <div class="caregiver-toggle__fields" id="caregiver-fields">
+                        <div class="form-group">
+                            <label for="caregiver-name" class="form-label">Their name</label>
+                            <input type="text" id="caregiver-name" class="form-input" placeholder="e.g., Your daughter Sarah">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label for="caregiver-contact" class="form-label">Their phone or email</label>
+                            <input type="text" id="caregiver-contact" class="form-input" placeholder="How to reach them">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="discount-modal__skip" id="discount-close" style="margin-top: var(--space-lg);">
+                    Close
+                </button>
             </div>
         </div>
     </div>
 
-    <script>
-        // Mobile navigation toggle
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
+    <!-- Footer -->
+    <footer class="footer-minimal" role="contentinfo">
+        <div class="container footer-minimal__inner">
+            <div class="footer-minimal__brand">
+                <span class="nav-minimal__logo-icon" style="width: 28px; height: 28px; font-size: 0.75rem;">MG</span>
+                MyGeekMac
+            </div>
+            <div class="footer-minimal__links">
+                <a href="/about.html" class="footer-minimal__link">About</a>
+                <a href="/ai-guidance.html" class="footer-minimal__link">AI Guidance</a>
+                <a href="/privacy.html" class="footer-minimal__link">Privacy</a>
+                <a href="/contact.html" class="footer-minimal__link">Contact</a>
+            </div>
+            <p class="footer-minimal__copy">&copy; 2025 Joshua Pirtle. Idyllwild, CA.</p>
+        </div>
+    </footer>
 
-        if (navToggle && navMenu) {
-            navToggle.addEventListener('click', () => {
-                const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                navToggle.setAttribute('aria-expanded', !isExpanded);
-                navMenu.classList.toggle('active');
-            });
-        }
-
-        // Close menu on link click
-        document.querySelectorAll('.nav__link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Cookie consent
-        (function() {
-            const banner = document.getElementById('cookie-banner');
-            const acceptBtn = document.getElementById('cookie-accept');
-            const declineBtn = document.getElementById('cookie-decline');
-
-            if (!localStorage.getItem('cookie-consent')) {
-                setTimeout(() => banner.classList.add('active'), 1000);
-            }
-
-            acceptBtn.addEventListener('click', () => {
-                localStorage.setItem('cookie-consent', 'accepted');
-                banner.classList.remove('active');
-            });
-
-            declineBtn.addEventListener('click', () => {
-                localStorage.setItem('cookie-consent', 'declined');
-                banner.classList.remove('active');
-            });
-        })();
-    </script>
+    <script src="js/helpdesk.js"></script>
 </body>
 </html>
