@@ -592,6 +592,24 @@ section {
     max-width: 500px;
 }
 
+.hero__location {
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    margin-top: var(--space-2);
+    font-weight: 500;
+}
+
+.hero__rebrand {
+    display: inline-block;
+    background: var(--color-gold-glow);
+    color: var(--color-gold);
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    margin-top: var(--space-3);
+    border: 1px solid rgba(244, 162, 97, 0.3);
+}
+
 .hero__media {
     justify-self: end;
     animation: scaleIn 0.8s ease-out 0.2s both;
