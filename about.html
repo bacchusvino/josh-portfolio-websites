@@ -1,222 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Josh | MyGeekMac</title>
-    <meta name="description" content="23 years of patient, judgment-free tech help. I translate confusing technology into clear decisions for seniors, small businesses, and anyone feeling overwhelmed.">
-    <meta name="author" content="Joshua Pirtle">
-    <link rel="canonical" href="https://mygeekmac.com/about.html">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mygeekmac.com/about.html">
-    <meta property="og:title" content="About Josh | MyGeekMac">
-    <meta property="og:description" content="23 years of patient, judgment-free tech help.">
-    <meta property="og:image" content="https://mygeekmac.com/img/og-image.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%237C9A92' rx='15' width='100' height='100'/><text y='68' x='50' text-anchor='middle' font-size='50' font-weight='bold' fill='white'>MG</text></svg>">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/helpdesk.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Josh Pirtle | Technology Steward</title>
+  <meta name="description" content="Two decades of technology guidance rooted in Naval Sea Cadet Corps values: Honor, Respect, and Commitment. Meet Josh Pirtle, your technology steward.">
+  
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-brand">my<span>geek</span>mac</a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="site-nav" id="main-nav">
+        <a href="/services.html">Services</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about.html" aria-current="page">About</a>
+        <a href="/contact.html" class="nav-cta">Get Help</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Ambient background -->
-    <div class="ambient-bg" aria-hidden="true"></div>
-
-    <!-- Navigation -->
-    <nav class="nav-minimal" role="navigation" aria-label="Main navigation">
-        <div class="container nav-minimal__inner">
-            <a href="/" class="nav-minimal__logo" aria-label="MyGeekMac - Home">
-                <span class="nav-minimal__logo-icon">MG</span>
-                MyGeekMac
-            </a>
-            <button class="nav-minimal__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-minimal__actions" id="nav-menu">
-                <a href="/about.html" class="nav-minimal__link" aria-current="page">About Josh</a>
-                <a href="/ai-guidance.html" class="nav-minimal__link">AI Guidance</a>
-                <a href="/remote-support.html" class="nav-minimal__link">Remote Support</a>
-                <a href="/contact.html" class="nav-minimal__cta">Talk to a Human</a>
-            </div>
+  <main id="main">
+    <!-- Hero -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero__content">
+          <p class="section__eyebrow">Meet Your Technology Steward</p>
+          <h1 class="about-hero__title">Honor. Respect. Commitment.</h1>
+          <p class="about-hero__subtitle">The Same Values I Teach Cadets Shape Every System I Build</p>
         </div>
-    </nav>
+      </div>
+    </section>
 
-    <main id="main" class="page">
-        <!-- About Section -->
-        <section class="about-section" style="padding-top: calc(var(--nav-height) + var(--space-3xl));">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-photo">
-                        <div class="about-photo__frame">
-                            <img src="/img/josh-about.jpg" alt="Josh Pirtle" class="about-photo__img" loading="eager">
-                        </div>
-                    </div>
-                    <div class="about-content">
-                        <p class="about-content__label">About</p>
-                        <h1 class="about-content__title">Hi, I'm Joscha.</h1>
-                        <p class="about-content__text">
-                            I've spent 23 years helping real people feel less overwhelmed by technology.
-                            Not because I love gadgets (though I do), but because I hate seeing people feel stupid
-                            about something that's genuinely confusing.
-                        </p>
-                        <p class="about-content__text">
-                            Technology changes fast. Companies make things complicated on purpose.
-                            And somehow, you're supposed to figure it all out while also living your life.
-                            That's where I come in.
-                        </p>
-                    </div>
-                </div>
+    <!-- Two Decades -->
+    <section>
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="/img/josh-about.jpg" alt="Josh Pirtle" width="300" height="375">
+            <div class="trust-badge-vertical">
+              <svg class="trust-icon-large" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              <span>Officer, U.S. Naval Sea Cadet Corps</span>
             </div>
-        </section>
-
-        <!-- Story Section -->
-        <section style="padding: var(--space-3xl) 0;">
-            <div class="container container--narrow">
-                <div class="prose">
-                    <h2>How I ended up doing this</h2>
-
-                    <p>
-                        I started helping people with computers when I was a teenager—mostly because I was the only one in my family who wasn't afraid to click things and see what happened. Turns out, that willingness to experiment (and the patience to explain what I learned) was valuable.
-                    </p>
-
-                    <p>
-                        Over the years, I worked in IT for businesses, helped friends and neighbors with their home setups, and eventually realized something: the people who needed help most weren't getting it. Seniors were being talked down to. Small business owners were being sold expensive solutions to simple problems. Normal people were being made to feel stupid for not understanding things that genuinely aren't intuitive.
-                    </p>
-
-                    <p>
-                        So I made that my focus. Patient, honest help for people who don't want to become tech experts—they just want their stuff to work.
-                    </p>
-
-                    <h2>What I believe</h2>
-
-                    <p>
-                        <strong>Technology should serve you, not the other way around.</strong> If a device or app is making your life harder, that's a problem with the technology—not with you.
-                    </p>
-
-                    <p>
-                        <strong>There are no stupid questions.</strong> If you're confused, the explanation wasn't good enough. That's on me to fix, not on you to already know.
-                    </p>
-
-                    <p>
-                        <strong>You don't need to understand everything.</strong> You need to understand enough to make decisions that work for your life. I'm here to help you reach that point—not to turn you into a tech person unless you want to be one.
-                    </p>
-
-                    <p>
-                        <strong>Honest guidance matters more than sales.</strong> Sometimes the right answer is "don't buy that" or "the free version is fine" or "you don't actually need this." I'll tell you that, even though it doesn't make me money.
-                    </p>
-
-                    <h2>Where I work</h2>
-
-                    <p>
-                        I live in Idyllwild, California and serve the mountain communities nearby—Pine Cove, Mountain Center, Anza, and surrounding areas. I come to you. Most issues can be resolved in a single visit at your home or place of business.
-                    </p>
-
-                    <p>
-                        When you call, you get me. Not a receptionist, not a call center, not a chatbot. Just a real person who will listen to what's going on and help you figure out next steps.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Values -->
-        <section style="padding: var(--space-3xl) 0; background: var(--warm-linen);">
-            <div class="container">
-                <div class="section-intro">
-                    <h2 class="section-intro__title">What you can expect</h2>
-                </div>
-
-                <div class="trust-stories__grid" style="max-width: 900px; margin: 0 auto;">
-                    <div class="story-card" style="text-align: center;">
-                        <div style="width: 56px; height: 56px; background: var(--calm-sage-glow); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--calm-sage-dark)" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <polyline points="12 6 12 12 16 14"/>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-sm);">Patience</h3>
-                        <p style="color: var(--warm-earth); margin: 0;">
-                            I'll explain things as many times as needed, in as many different ways as it takes. No sighing, no rushing.
-                        </p>
-                    </div>
-
-                    <div class="story-card" style="text-align: center;">
-                        <div style="width: 56px; height: 56px; background: var(--calm-sage-glow); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--calm-sage-dark)" stroke-width="2">
-                                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                                <path d="M2 12h20"/>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-sm);">Plain English</h3>
-                        <p style="color: var(--warm-earth); margin: 0;">
-                            No jargon, no acronyms without explanation, no making you feel like you should already know this.
-                        </p>
-                    </div>
-
-                    <div class="story-card" style="text-align: center;">
-                        <div style="width: 56px; height: 56px; background: var(--calm-sage-glow); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-md);">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--calm-sage-dark)" stroke-width="2">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                            </svg>
-                        </div>
-                        <h3 style="font-size: var(--text-lg); margin-bottom: var(--space-sm);">Respect</h3>
-                        <p style="color: var(--warm-earth); margin: 0;">
-                            You're not dumb for not understanding technology. You've been busy living your life. That's as it should be.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA -->
-        <section style="padding: var(--space-3xl) 0;">
-            <div class="container text-center">
-                <h2 style="font-size: var(--text-2xl); margin-bottom: var(--space-md);">Ready to get some help?</h2>
-                <p style="color: var(--warm-earth); margin-bottom: var(--space-xl); max-width: 500px; margin-left: auto; margin-right: auto;">
-                    Call, text, or send a message. Describe what's going on, and I'll help you figure out next steps.
-                </p>
-                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-                    <a href="/contact.html" class="btn-action btn-action--primary" style="width: auto; padding: var(--space-md) var(--space-xl);">
-                        Get in touch
-                    </a>
-                    <a href="tel:+19514685674" class="btn-action btn-action--secondary" style="width: auto; padding: var(--space-md) var(--space-xl);">
-                        Call: (951) 468-5674
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer-minimal" role="contentinfo">
-        <div class="container footer-minimal__inner">
-            <div class="footer-minimal__brand">
-                <span class="nav-minimal__logo-icon" style="width: 28px; height: 28px; font-size: 0.75rem;">MG</span>
-                MyGeekMac
-            </div>
-            <div class="footer-minimal__links">
-                <a href="/about.html" class="footer-minimal__link">About</a>
-                <a href="/ai-guidance.html" class="footer-minimal__link">AI Guidance</a>
-                <a href="/remote-support.html" class="footer-minimal__link">Remote Support</a>
-                <a href="/privacy.html" class="footer-minimal__link">Privacy</a>
-                <a href="/contact.html" class="footer-minimal__link">Contact</a>
-            </div>
-            <p class="footer-minimal__copy">&copy; 2025 Joshua Pirtle. Idyllwild, CA.</p>
+          </div>
+          
+          <div class="about-text">
+            <h2>Two Decades of Translating Technology for Real People</h2>
+            
+            <p>I started helping people with computers in 2002, back when "tech support" meant showing up with a bag of cables and a lot of patience.</p>
+            
+            <p>Over two decades, the technology changed dramatically. The patience? That stayed exactly the same.</p>
+            
+            <p>What I've learned in all that time is that most technology frustration isn't about the technology—it's about communication. Experts speak a language designed to impress other experts, not to help the person sitting across from them.</p>
+            
+            <p>I decided early on that I would be different. Every explanation in plain English. Every question treated as valid. Every client treated as capable of understanding their own technology, given the right guidance.</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script src="js/helpdesk.js"></script>
+    <!-- NSCC Connection -->
+    <section class="section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">What the Naval Sea Cadet Corps Taught Me About Teaching Technology</h2>
+        </div>
+        
+        <div class="nscc-content">
+          <p class="lead">Several years ago, I became an officer in the <strong>U.S. Naval Sea Cadet Corps (NSCC)</strong>—a youth leadership development program sponsored by the Navy League of the United States.</p>
+          
+          <p>Teaching cadets changed how I approach everything.</p>
+          
+          <p>When you're training a 14-year-old to tie a bowline knot under pressure, or explaining nautical navigation to a teenager who's never been on a boat, you learn something crucial: <strong>the instructor's frustration is never the student's fault.</strong></p>
+          
+          <p>If a cadet doesn't understand, the instruction needs to change—not the cadet.</p>
+          
+          <p>That principle transformed my technology practice. When a senior struggles with their email, that's not a failure of the senior—it's a prompt for me to find a better way to explain. When a business owner can't grasp a networking concept, I don't simplify the concept; I find the right analogy, the right example, the right entry point for their particular way of learning.</p>
+          
+          <div class="values-grid">
+            <div class="value-card">
+              <h3 class="value-card__title">Honor</h3>
+              <p class="value-card__desc">I tell you the truth about what you need, even when it means recommending less expensive solutions or admitting I'm not the right person for the job.</p>
+            </div>
+            
+            <div class="value-card">
+              <h3 class="value-card__title">Respect</h3>
+              <p class="value-card__desc">Your questions are valid, your pace is appropriate, and your intelligence is never in question. Age and technical background don't determine capability.</p>
+            </div>
+            
+            <div class="value-card">
+              <h3 class="value-card__title">Commitment</h3>
+              <p class="value-card__desc">I don't disappear after the invoice clears. I remain available for questions, follow-up guidance, and the ongoing stewardship your technology deserves.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Building Systems of Character</h2>
+        </div>
+        
+        <div class="philosophy-content">
+          <p class="lead">Most technology is built to extract—your attention, your data, your money.</p>
+          
+          <p>I build technology to protect.</p>
+          
+          <p>Every system I design, every recommendation I make, every tool I introduce starts with a simple question: <em>Does this serve the person I'm helping, or does it serve someone else's agenda?</em></p>
+          
+          <p>That's what I mean by "systems of character." Technology infrastructure that:</p>
+          
+          <ul class="character-list">
+            <li>Protects privacy by default, not as an afterthought</li>
+            <li>Respects attention instead of demanding it constantly</li>
+            <li>Builds independence rather than dependency</li>
+            <li>Values longevity over planned obsolescence</li>
+            <li>Empowers users to understand and control their own tools</li>
+          </ul>
+          
+          <p>This philosophy isn't anti-technology. I love technology. I've spent my life immersed in it. But I love people more—and I believe technology should serve human flourishing, not undermine it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials -->
+    <section class="section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Background & Expertise</h2>
+        </div>
+        
+        <div class="credentials-grid">
+          <div class="credential-section">
+            <h3>Experience</h3>
+            <ul class="credential-list">
+              <li><strong>2002–Present:</strong> Independent technology consultant serving individuals, families, and small businesses</li>
+              <li><strong>Two decades:</strong> Supporting seniors with patient, dignified technology guidance</li>
+              <li><strong>Active NSCC Officer:</strong> Training young leaders in discipline, communication, and character</li>
+              <li><strong>Apple & Windows certified:</strong> Deep expertise across platforms</li>
+              <li><strong>AI practitioner:</strong> Specializing in local, privacy-respecting AI implementations</li>
+              <li><strong>Web developer:</strong> Building modern, accessible websites for professionals and organizations</li>
+            </ul>
+          </div>
+          
+          <div class="credential-section">
+            <h3>Specializations</h3>
+            <ul class="credential-list">
+              <li>Senior technology advocacy and education</li>
+              <li>Privacy-first AI systems (Ollama, local LLMs, RAG)</li>
+              <li>Small business data sovereignty</li>
+              <li>Home and business networking</li>
+              <li>Scam prevention and digital security</li>
+              <li>Modern web development (Netlify, Cloudflare)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Personal -->
+    <section>
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">When I'm Not Helping With Technology</h2>
+        </div>
+        
+        <div class="personal-content">
+          <p>I live in Idyllwild, California—a small mountain community where neighbors still wave at each other and technology exists to enhance life, not replace it.</p>
+          
+          <p>I believe in the power of local community, the importance of intergenerational wisdom, and the value of taking things slow enough to do them right.</p>
+          
+          <p>When I'm not helping clients or training cadets, you'll find me on the trails, with a book, or working on projects that may never ship but teach me something new.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Let's Have a Conversation</h2>
+          <p class="cta-desc">I'm not right for everyone. If you want someone to "move fast and break things," I'm not your person. But if you value patient guidance, privacy protection, and technology that serves your actual life—we should talk.</p>
+          
+          <a href="/contact.html" class="btn btn--primary btn--large">Schedule Your Discovery Call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">my<span>geek</span>mac</p>
+          <p class="footer-tagline">Technology Stewardship for Mountain & Valley Communities. Protecting your privacy, building your confidence, and designing systems with character.</p>
+        </div>
+        
+        <div>
+          <p class="footer-heading">Navigation</p>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/projects.html">Projects</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <p class="footer-heading">Contact</p>
+          <ul class="footer-links">
+            <li><a href="mailto:josh@mygeekmac.com">josh@mygeekmac.com</a></li>
+            <li><a href="tel:+19514685674">(951) 468-5674</a></li>
+            <li>Idyllwild, CA 92549</li>
+          </ul>
+        </div>
+        
+        <div>
+          <p class="footer-heading">Related Sites</p>
+          <ul class="footer-links">
+            <li><a href="https://mygeekpc.com" target="_blank" rel="noopener">MyGeekPC — Senior Tech Advocacy</a></li>
+            <li><a href="https://familyloop.us" target="_blank" rel="noopener">FamilyLoop — Voice Calendar for Families</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+        <p>Serving mountain and valley communities since 2002.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.site-nav');
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
 </body>
 </html>
