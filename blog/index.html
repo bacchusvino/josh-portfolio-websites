@@ -31,7 +31,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="/css/blog.css">
 
     <!-- Preconnect for performance -->
@@ -40,31 +39,24 @@
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    
-<!-- Navigation -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="container nav__inner">
-        <a href="/" class="nav__logo" aria-label="Josh Pirtle - Home">
-            <span class="nav__logo-icon">JP</span>
-            Josh Pirtle
-        </a>
-        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav__menu" id="nav-menu" role="menubar">
-            <li role="none"><a href="/" class="nav__link" role="menuitem">Home</a></li>
-            <li role="none"><a href="/services.html" class="nav__link" role="menuitem">Services</a></li>
-            <li role="none"><a href="/projects/index.html" class="nav__link" role="menuitem">Projects</a></li>
-            <li role="none"><a href="/about.html" class="nav__link" role="menuitem">About</a></li>
-            <li role="none"><a href="/dispatch/index.html" class="nav__link nav__link--active" role="menuitem">Blog</a></li>
-            <li role="none"><a href="/contact.html" class="nav__link" role="menuitem">Contact</a></li>
-            <li role="none"><a href="/contact.html" class="btn btn--primary btn--small" role="menuitem">Get Help</a></li>
-        </ul>
-    </div>
-</nav>
-
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="site-brand">my<span>geek</span>mac</a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="site-nav" id="main-nav">
+                <a href="/services.html">Services</a>
+                <a href="/blog/" aria-current="page">Blog</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html" class="nav-cta">Get Help</a>
+            </nav>
+        </div>
+    </header>
 
     <main id="main-content">
         <section class="blog-hero" aria-labelledby="blog-hero-title">
@@ -96,59 +88,57 @@
         <span aria-hidden="true">↑</span>
     </button>
 
-    
-<!-- Footer -->
-<footer class="footer" role="contentinfo">
-    <div class="container">
-        <div class="footer__grid">
-            <div class="footer__brand">
-                <div class="footer__logo">Josh Pirtle</div>
-                <p class="footer__tagline">
-                    Mobile IT support that comes to you. Patient guidance for seniors,
-                    practical AI for businesses, and real solutions for everyone.
-                </p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <p class="footer-brand">my<span>geek</span>mac</p>
+                    <p class="footer-tagline">Technology Stewardship for Mountain & Valley Communities. Protecting your privacy, building your confidence, and designing systems with character.</p>
+                </div>
+                
+                <div>
+                    <p class="footer-heading">Navigation</p>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="footer-heading">Contact</p>
+                    <ul class="footer-links">
+                        <li><a href="mailto:josh@mygeekmac.com">josh@mygeekmac.com</a></li>
+                        <li><a href="tel:+19514685674">(951) 468-5674</a></li>
+                        <li>Idyllwild, CA 92549</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <p class="footer-heading">Related Sites</p>
+                    <ul class="footer-links">
+                        <li><a href="https://mygeekpc.com" target="_blank" rel="noopener">MyGeekPC — Senior Tech Advocacy</a></li>
+                        <li><a href="https://familyloop.us" target="_blank" rel="noopener">FamilyLoop — Voice Calendar for Families</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4 class="footer__heading">Services</h4>
-                <ul class="footer__links">
-                    <li><a href="/services.html#computer-repair" class="footer__link">Computer Repair</a></li>
-                    <li><a href="/services.html#senior-support" class="footer__link">Senior Support</a></li>
-                    <li><a href="/services.html#ai-consulting" class="footer__link">AI Consulting</a></li>
-                    <li><a href="/services.html#networking" class="footer__link">Home Networking</a></li>
-                    <li><a href="/local-services.html" class="footer__link">Local Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer__heading">Company</h4>
-                <ul class="footer__links">
-                    <li><a href="/about.html" class="footer__link">About Josh</a></li>
-                    <li><a href="/projects/index.html" class="footer__link">Projects</a></li>
-                    <li><a href="/dispatch/index.html" class="footer__link">Blog</a></li>
-                    <li><a href="/contact.html" class="footer__link">Contact</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="footer__heading">Contact</h4>
-                <ul class="footer__links">
-                    <li><a href="tel:+19514685674" class="footer__link">(951) 468-5674</a></li>
-                    <li><a href="mailto:josh@mygeekmac.com" class="footer__link">josh@mygeekmac.com</a></li>
-                    <li><span class="footer__link">PO Box 11</span></li>
-                    <li><span class="footer__link">Idyllwild, CA 92549</span></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
-            <div class="footer__social">
-                <a href="https://www.linkedin.com/in/joscha-pirtle-9446a19/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://www.facebook.com/mygeekmac" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://g.page/r/CYkr2-fy_M9qEAI/review" target="_blank" rel="noopener noreferrer">Google</a>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Josh Pirtle. All rights reserved.</p>
+                <p>Serving mountain and valley communities since 2002.</p>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-
-    <script src="/main.js" defer></script>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.site-nav');
+        navToggle.addEventListener('click', () => {
+            const isOpen = nav.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
 </body>
 </html>
