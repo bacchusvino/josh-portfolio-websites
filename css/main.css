@@ -91,6 +91,30 @@ body {
 }
 .site-brand span { color: var(--accent); }
 
+.header-phone {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border: 2px solid var(--navy);
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.header-phone:hover {
+  background: var(--navy);
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .header-phone {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    order: 2;
+  }
+}
+
 .site-nav {
   display: flex;
   align-items: center;
