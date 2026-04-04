@@ -6,12 +6,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;500;600&display=swap');
 
 :root {
-  --ink: #1a1a18;
+  --ink: #3D3A36;
   --paper: #faf8f5;
   --warm-gray: #6b6560;
-  --accent: #e8a87c;
-  --accent-dark: #d4956a;
+  --accent: #D4956a;
+  --accent-dark: #c4853a;
+  --accent-hover: #b87530;
   --navy: #1e3a5f;
+  --sage: #7C9A92;
   --cream: #f5f0e8;
   --rule: #e5e0d8;
   --google-gold: #fbbc04;
@@ -19,12 +21,12 @@
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
   
-  --text-xs: 0.875rem;
-  --text-sm: 1rem;
-  --text-base: 1.125rem;
-  --text-lg: 1.375rem;
-  --text-xl: 1.75rem;
-  --text-2xl: 2.5rem;
+  --text-xs: 0.9375rem;
+  --text-sm: 1.0625rem;
+  --text-base: 1.1875rem;
+  --text-lg: 1.5rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.75rem;
   
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -37,7 +39,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; scroll-behavior: smooth; }
+html { font-size: 18px; scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -90,6 +92,26 @@ body {
   text-decoration: none;
 }
 .site-brand span { color: var(--accent); }
+
+/* Sticky phone bar */
+.phone-bar {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.phone-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+.phone-bar a:hover {
+  color: var(--accent);
+}
 
 .header-phone {
   font-family: var(--font-body);
@@ -241,23 +263,26 @@ body {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-xs);
   font-family: var(--font-body);
   font-size: var(--text-sm);
   font-weight: 600;
-  padding: var(--space-sm) var(--space-md);
-  border-radius: 6px;
+  padding: 0.85rem 1.75rem;
+  border-radius: 50px;
   text-decoration: none;
   transition: all 0.2s;
   border: none;
   cursor: pointer;
+  min-height: 48px;
 }
 
 .btn--primary {
-  background: var(--navy);
-  color: white;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(212, 149, 106, 0.3);
 }
-.btn--primary:hover { background: #2d4a6f; }
+.btn--primary:hover { background: var(--accent-hover); box-shadow: 0 4px 12px rgba(212, 149, 106, 0.4); }
 
 .btn--secondary {
   background: transparent;
@@ -273,12 +298,14 @@ body {
   background: transparent;
   color: var(--navy);
   padding-left: 0;
+  border-radius: 0;
 }
 .btn--ghost:hover { color: var(--accent-dark); }
 
 .btn--large {
   font-size: var(--text-base);
-  padding: var(--space-md) var(--space-lg);
+  padding: 1rem 2.25rem;
+  min-height: 56px;
 }
 
 /* ========================
