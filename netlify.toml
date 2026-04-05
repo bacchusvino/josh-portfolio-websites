@@ -7,8 +7,8 @@
 
 # Redirect www to non-www (optional, configure domain first)
 [[redirects]]
-  from = "https://www.joshpirtle.com/*"
-  to = "https://joshpirtle.com/:splat"
+  from = "https://www.mygeekmac.com/*"
+  to = "https://mygeekmac.com/:splat"
   status = 301
   force = true
 
